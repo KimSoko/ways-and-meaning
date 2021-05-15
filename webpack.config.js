@@ -31,7 +31,7 @@ module.exports = {
     ]
   },
   output: {
-    filename: 'ignoredBundle.js',
+    filename: 'bundle.js',
     path: __dirname + '/client/dist'
   },
   plugins: [new ESLintPlugin()],

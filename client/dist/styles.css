@@ -1,15 +1,15 @@
 body {
-  background-color: #E3EADC;
+  background-color: #F4F3E7;
 }
 
-.app {
-  width: 600px;
+#app {
+  padding: 20px;
 }
 
 h1 {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 54px;
-  color: #6377E1;
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 48px;
+  color: #005B98;
 }
 
 h2 {
@@ -19,7 +19,55 @@ h2 {
 }
 
 p {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: Helvetica,Arial,sans-serif;
   font-size: 16px;
   color: #2B2F33;
+}
+
+/******************* HEADER ******************/
+
+.space {
+  height: 50px;
+}
+
+.header-3-col {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+#title-div {
+  border-bottom: 8px;
+  border-bottom-color:#005B98;
+  border-bottom-style: solid;
+  width: 450px;
+}
+
+#header-title {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  text-align: center;
+  padding-bottom: 10px;
+  letter-spacing: 1.3px;
+}
+
+#header-sub {
+  font-size: 12px;
+  color: #005B98;
+  margin: 0;
+  padding-top: 30px;
+  float: right;
+}
+
+.menu-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 30px 0 0 0;
+}
+
+.menu-item {
+  float: left;
+  padding-right: 15px;
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  color: #005B98;
 }

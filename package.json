@@ -4,7 +4,7 @@
   "description": "A website for mindful entrepreneurs",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon --watch server.js",
+    "start": "nodemon server.js",
     "start-react": "webpack --mode=development --watch",
     "test": "test"
   },
@@ -19,21 +19,23 @@
   },
   "homepage": "https://github.com/KimSoko/ways-and-meaning#readme",
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "devDependencies": {
     "@babel/core": "^7.14.2",
-    "@babel/eslint-parser": "^7.14.2",
     "@babel/preset-env": "^7.14.2",
     "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "cors": "^2.8.5",
+    "eslint-webpack-plugin": "^2.5.4",
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "terser-webpack-plugin": "^5.1.2",
+    "webpack-cli": "^4.7.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.14.2",
     "eslint": "^7.26.0",
     "eslint-plugin-react": "^7.23.2",
-    "eslint-webpack-plugin": "^2.5.4",
-    "terser-webpack-plugin": "^5.1.2",
-    "webpack": "^5.37.0",
-    "webpack-cli": "^4.7.0"
+    "nodemon": "^2.0.7",
+    "webpack": "^5.37.0"
   }
 }
