@@ -24,7 +24,7 @@ const Ideas = () => {
         </div>
       </header>
       <main>
-
+        <h1>This is the Ideas Page</h1>
       </main>
       <footer>
 

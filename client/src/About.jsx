@@ -24,7 +24,7 @@ const About = () => {
         </div>
       </header>
       <main>
-
+      <h1>This is the About Page</h1>
       </main>
       <footer>
 

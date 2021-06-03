@@ -1,23 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
+import { Route, Switch } from 'react-router-dom';
 import Start from './Start.jsx';
 import Ideas from './Ideas.jsx';
 import About from './About.jsx';
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState('start');
 
   return (
     <div>
-      {currentPage === 'start' && (
-      <Start />
-      )}
-      {currentPage === 'ideas' && (
-      <Ideas />
-      )}
-      {currentPage === 'about' && (
-      <About />
-      )}
+      <Switch>
+        <Route exact path='/' component={Start} />
+        <Route exact path='/ideas' component={Ideas} />
+        <Route exact path='/about' component={About} />
+      </Switch>
     </div>
   )
 };

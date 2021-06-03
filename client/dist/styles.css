@@ -71,3 +71,7 @@ p {
   font-size: 12px;
   color: #005B98;
 }
+
+.menu-item-active {
+  color: #E15400;
+}

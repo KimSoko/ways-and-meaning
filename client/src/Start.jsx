@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { NavLink } from 'react-router-dom';
+import Ideas from './Ideas.jsx';
+import About from './About.jsx';
 
 const Start = () => {
   return (
@@ -8,13 +11,13 @@ const Start = () => {
         <nav className="menu-main">
           <ul className="menu-list">
             <li className="menu-item">
-              <a href="https://www.waysandmeaning.com">Home</a>
+              <NavLink activeClassName="menu-item-active" to="/">Start</NavLink>
             </li>
             <li className="menu-item">
-              <a href="https://www.waysandmeaning/articles.com">Ideas</a>
+              <NavLink activeClassName="menu-item-active" to="/ideas">Ideas</NavLink>
             </li>
             <li className="menu-item">
-              <a href="https://www.waysandmeaning.com/about">About</a>
+              <NavLink activeClassName="menu-item-active" to="/about">About</NavLink>
             </li>
           </ul>
         </nav>
