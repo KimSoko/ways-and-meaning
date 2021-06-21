@@ -1,9 +1,7 @@
 body {
   background-color: #FFFCF1;
-}
-
-#app {
-  padding: 20px;
+  margin: 0;
+  height: 100%;
 }
 
 .left-container {
@@ -52,17 +50,31 @@ button {
 
 /*************** START *********************/
 
+.start-page-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
 .start-button-div {
   width: 30rem;
   padding: 10rem;
 }
 
-.start-menu-container {
-  width: 850px;
+.menu-container {
+  grid-column: 2 / 3;
+  width: 550px;
   height: 100%;
   display: grid;
-  grid-template-columns: auto repeat(4 150px);
+  grid-template-columns: auto 50px 50px 50px 50px;
   grid-template-rows: auto;
+}
+
+.app-bar {
+  grid-column: 2 / 3;
+  background-color: #497F5E;
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  color: #E8EAAC;
 }
 
 /******************* HEADER ******************/

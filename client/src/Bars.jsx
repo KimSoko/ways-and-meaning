@@ -7,27 +7,22 @@ import About from './About.jsx';
 
 const Bars = () => {
   return (
-    <header className="header-3-col">
-      <nav className="menu-main">
-        <ul className="menu-list">
-          <li className="menu-item">
-            <NavLink exact activeClassName="menu-item-active" to="/">Start</NavLink>
-          </li>
-          <li className="menu-item">
-            <NavLink exact activeClassName="menu-item-active" to="/ideas">Ideas</NavLink>
-          </li>
-          <li className="menu-item">
-            <NavLink exact activeClassName="menu-item-active" to="/about">About</NavLink>
-          </li>
-        </ul>
-      </nav>
-      <div id="title-div">
-        <h1 id="header-title">WAYS + MEANING</h1>
-      </div>
-      <div>
-        <p id="header-sub">Ideas for better living</p>
-      </div>
-    </header>
+    <nav className="menu-main">
+      <ul className="menu-list">
+        <li className="app-bar">
+          <NavLink exact activeClassName="menu-item-active" to="/decide">WHAT MATTERS MOST APP</NavLink>
+        </li>
+        <li className="purpose-bar">
+          <NavLink exact activeClassName="menu-item-active" to="/purpose">PURPOSE TOOLKIT</NavLink>
+        </li>
+        <li className="ideas-bar">
+          <NavLink exact activeClassName="menu-item-active" to="/ideas">IDEAS</NavLink>
+        </li>
+        <li className="about-bar">
+          <NavLink exact activeClassName="menu-item-active" to="/about">ABOUT</NavLink>
+        </li>
+      </ul>
+    </nav>
   )
 };
 

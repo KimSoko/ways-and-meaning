@@ -4,7 +4,7 @@ import Bars from './Bars.jsx';
 
 const Start = () => {
   return (
-    <div className="start-page-continer">
+    <div className="start-page-container">
       <div className="left-container">
         <h1>Ways + Meaning</h1>
         <h3>Tools for living better</h3>
@@ -12,7 +12,7 @@ const Start = () => {
           <button>Click Me</button>
         </div>
       </div>
-      <div className="start-menu-container">
+      <div className="menu-container">
        <Bars />
       </div>
     </div>
