@@ -1,15 +1,21 @@
 body {
-  background-color: #F4F3E7;
+  background-color: #FFFCF1;
 }
 
 #app {
   padding: 20px;
 }
 
+.left-container {
+  margin: 80px;
+}
+
 h1 {
   font-family: Helvetica,Arial,sans-serif;
-  font-size: 48px;
-  color: #005B98;
+  font-size: 100px;
+  color: #2B2F33;
+  width: 30rem;
+  margin: 0;
 }
 
 h2 {
@@ -18,10 +24,45 @@ h2 {
   color: #E15400
 }
 
+h3 {
+  margin-top: 50px;
+  border-top: 5px #2B2F33 solid;
+  padding-top: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  color: #2B2F33;
+}
+
 p {
   font-family: Helvetica,Arial,sans-serif;
   font-size: 16px;
   color: #2B2F33;
+}
+
+button {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: #2B2F33;
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  color: #EAB6E5;
+  box-shadow: 3px 3px 5px darkgray;
+}
+
+/*************** START *********************/
+
+.start-button-div {
+  width: 30rem;
+  padding: 10rem;
+}
+
+.start-menu-container {
+  width: 850px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto repeat(4 150px);
+  grid-template-rows: auto;
 }
 
 /******************* HEADER ******************/

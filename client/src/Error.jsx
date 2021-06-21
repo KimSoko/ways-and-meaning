@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Bars from './Bars.jsx';
 
-const About = () => {
+const Error = () => {
   return (
-    <div className="about">
+    <div className="start">
       <Bars />
       <main>
-      <h1>This is the About Page</h1>
+        <h1>Whoops! I messed up and sent you nowhere. My bad. Enjoy this free Purpose toolkit instead :)</h1>
       </main>
       <footer>
 
@@ -16,4 +16,4 @@ const About = () => {
   )
 };
 
-export default About;
+export default Error;
