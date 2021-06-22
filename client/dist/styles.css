@@ -93,6 +93,10 @@ button {
   height: 100%;
 }
 
+.bar {
+  box-shadow: 5px 5px 10px darkgray;
+}
+
 .nav-bar-div {
   padding-top: 30px;
   padding-right: 10px;
@@ -105,6 +109,7 @@ button {
   width: 100%;
   padding: 150px 20px 20px 20px;
   flex: 1;
+  transition: all 1s;
 }
 
 #start-box {
@@ -123,12 +128,18 @@ button {
   margin-left: 80px;
 }
 
-#toolkit-bar {
+.toolkit-bar {
   background-color: #EAB6E5;
   color: #E15400;
 }
 
-#ideas-bar {
+.toolkit-bar-2 {
+  background-color: #497F5E;
+  color: #EAB6E5;
+  margin-left: 80px;
+}
+
+.ideas-bar {
   background-color: #E5E4FC;
   color: #1D4763;
 }
@@ -136,6 +147,24 @@ button {
 .about-bar {
   background-color: #E15400;
   color: #EAB6E5;
+}
+
+.box-expanded-enter {
+  transform: translate(-100%);
+}
+
+.box-expanded-enter-active {
+  transform: translate(0);
+  transition: transform 0.5s linear;
+}
+
+.box-expanded-exit {
+  transform: translate(0);
+}
+
+.box-expanded-exit-active {
+  transform: translate(-100%);
+  transition: transform 0.5s linear;
 }
 
 /******************* HEADER ******************/

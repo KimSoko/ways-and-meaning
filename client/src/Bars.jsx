@@ -3,58 +3,28 @@ import ReactDOM from 'react-dom';
 import { NavLink } from 'react-router-dom';
 import StartBox from './nav/StartBox.jsx';
 import AppBar from './nav/AppBar.jsx';
-import AppBox from './nav/AppBox.jsx';
 import ToolkitBar from './nav/ToolkitBar.jsx';
-// import TooklitBox from './nav/ToolkitBox.jsx';
 import IdeasBar from './nav/IdeasBar.jsx';
-// import IdeasBox from './nav/IdeasBox.jsx';
 import AboutBar from './nav/AboutBar.jsx';
-// import AboutBox from './nav/AboutBox.jsx';
 
-const Bars = ({ display, setDisplay }) => {
-
-
+const Bars = ({ display }) => {
   return (
     <nav className="main-menu">
       {display === 'start' && (
         <>
         <StartBox />
-        <AppBar />
-        <ToolkitBar />
-        <IdeasBar />
-        <AboutBar />
+        <AppBar display={display}/>
+        <ToolkitBar display={display}/>
+        <IdeasBar display={display}/>
+        <AboutBar display={display}/>
         </>
       )}
-      {display === 'app' && (
+      {display !== 'start' && (
         <>
-        <AppBox />
-        <ToolkitBar />
-        <IdeasBar />
-        <AboutBar />
-        </>
-      )}
-      {display === 'toolkit' && (
-        <>
-        <AppBar />
-        <ToolkitBox />
-        <IdeasBar />
-        <AboutBar />
-        </>
-      )}
-      {display === 'ideas' && (
-        <>
-        <AppBar />
-        <ToolkitBar />
-        <IdeasBox />
-        <AboutBar />
-        </>
-      )}
-      {display === 'about' && (
-        <>
-        <AppBar />
-        <ToolkitBar />
-        <IdeasBar />
-        <AboutBox />
+        <AppBar display={display}/>
+        <ToolkitBar display={display}/>
+        <IdeasBar display={display}/>
+        <AboutBar display={display}/>
         </>
       )}
     </nav>
