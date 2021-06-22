@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 const ToolkitBar = () => {
   return (
     <div className="nav-bar-div" id="toolkit-bar">
-      <h2>PURPOSE TOOLKIT</h2>
+      <h4>PURPOSE TOOLKIT</h4>
     </div>
   )
 };

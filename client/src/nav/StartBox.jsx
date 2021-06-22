@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 const StartBox = () => {
   return (
-    <div className="nav-bar-div" id="start-box">
+    <div className="nav-box-div" id="start-box">
     </div>
   )
 };

@@ -1,10 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import Bars from './Bars.jsx';
 
 const Start = () => {
   const options = ['start', 'app', 'toolkit', 'ideas', 'about'];
-  const [ display, setDisplay ] = useState(options[0]);
+  const [ index, setIndex ] = useState(0);
+  const [ display, setDisplay ] = useState(options[index]);
+
+  const handleDisplay = () => {
+    let newIndex = index;
+    if (newIndex === options.length - 1) {
+      newIndex = 0;
+    } else {
+      newIndex++;
+    }
+    setIndex(newIndex)
+  }
+
+  useEffect(() => {
+    setDisplay(options[index])
+  }, [index])
 
   return (
     <div className="start-page-container">
@@ -12,7 +27,7 @@ const Start = () => {
         <h1>Ways + Meaning</h1>
         <h3>Tools for living better</h3>
         <div className="start-button-div">
-          <button>Click Me</button>
+          <button onClick={handleDisplay}>Click Me</button>
         </div>
       </div>
       <div className="menu-container">

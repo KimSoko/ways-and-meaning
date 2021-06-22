@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { NavLink } from 'react-router-dom';
 import StartBox from './nav/StartBox.jsx';
 import AppBar from './nav/AppBar.jsx';
-// import AppBox from './nav/AppBox.jsx';
+import AppBox from './nav/AppBox.jsx';
 import ToolkitBar from './nav/ToolkitBar.jsx';
 // import TooklitBox from './nav/ToolkitBox.jsx';
 import IdeasBar from './nav/IdeasBar.jsx';
@@ -25,9 +25,8 @@ const Bars = ({ display, setDisplay }) => {
         <AboutBar />
         </>
       )}
-      {/* {display === 'app' && (
+      {display === 'app' && (
         <>
-        <AppBar />
         <AppBox />
         <ToolkitBar />
         <IdeasBar />
@@ -37,7 +36,6 @@ const Bars = ({ display, setDisplay }) => {
       {display === 'toolkit' && (
         <>
         <AppBar />
-        <ToolkitBar />
         <ToolkitBox />
         <IdeasBar />
         <AboutBar />
@@ -47,7 +45,6 @@ const Bars = ({ display, setDisplay }) => {
         <>
         <AppBar />
         <ToolkitBar />
-        <IdeasBar />
         <IdeasBox />
         <AboutBar />
         </>
@@ -57,10 +54,9 @@ const Bars = ({ display, setDisplay }) => {
         <AppBar />
         <ToolkitBar />
         <IdeasBar />
-        <AboutBar />
         <AboutBox />
         </>
-      )} */}
+      )}
     </nav>
   )
 };

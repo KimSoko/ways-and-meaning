@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 
 const AboutBar = () => {
   return (
-    <div className="nav-bar-div" id="about-bar">
-      <h2>ABOUT</h2>
+    <div className="nav-bar-div about-bar">
+      <h4>ABOUT</h4>
     </div>
   )
 };

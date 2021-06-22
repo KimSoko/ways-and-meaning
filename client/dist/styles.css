@@ -5,7 +5,8 @@ body {
 }
 
 .left-container {
-  margin: 80px;
+  margin: 80px 0 80px 80px;
+  width: 60%;
 }
 
 h1 {
@@ -16,13 +17,16 @@ h1 {
   margin: 0;
 }
 
+/* NAV BOX TITLES */
 h2 {
   font-family: Helvetica,Arial,sans-serif;
-  font-size: 16px;
+  font-size: 30px;
   letter-spacing: 4px;
-  font-weight: normal;
+  font-weight: bold;
+  margin-bottom: 100px;
 }
 
+/* START PAGE SUB-TITLE */
 h3 {
   margin-top: 50px;
   border-top: 5px #2B2F33 solid;
@@ -32,10 +36,24 @@ h3 {
   color: #2B2F33;
 }
 
-p {
+/* NAV BAR TITLES */
+h4 {
   font-family: Helvetica,Arial,sans-serif;
   font-size: 16px;
-  color: #2B2F33;
+  letter-spacing: 4px;
+  font-weight: normal;
+}
+
+p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+li {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 button {
@@ -49,11 +67,14 @@ button {
   box-shadow: 3px 3px 5px darkgray;
 }
 
+.center {
+  text-align: center;
+}
+
 /*************** START *********************/
 
 .start-page-container {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
 }
 
 .start-button-div {
@@ -62,21 +83,13 @@ button {
 }
 
 .menu-container {
-  grid-column: 2 / 3;
-  width: 550px;
-  height: 100%;
-}
-
-.all-bars {
-  grid-column: 2 / 6;
+  flex: 1;
 }
 
 /******************* BARS ******************/
 
 .main-menu {
-  display: grid;
-  grid-template-columns: auto 70px 70px 70px 70px;
-  grid-template-rows: auto;
+  display: flex;
   height: 100%;
 }
 
@@ -89,33 +102,38 @@ button {
 }
 
 .nav-box-div {
-  padding: 20px;
+  width: 100%;
+  padding: 150px 20px 20px 20px;
+  flex: 1;
 }
 
 #start-box {
-  grid-column: 1 / 2;
+  height: 190px;
+  border-bottom: 5px #2B2F33 solid;
 }
 
-#app-bar {
-  grid-column: 2 / 3;
+.app-bar {
   background-color: #497F5E;
   color: #E8EAAC;
 }
 
+.app-bar-2 {
+  background-color: #E5E4FC;
+  color: #497F5E;
+  margin-left: 80px;
+}
+
 #toolkit-bar {
-  grid-column: 3 / 4;
   background-color: #EAB6E5;
   color: #E15400;
 }
 
 #ideas-bar {
-  grid-column: 4 / 5;
   background-color: #E5E4FC;
   color: #1D4763;
 }
 
-#about-bar {
-  grid-column: 5 / 6;
+.about-bar {
   background-color: #E15400;
   color: #EAB6E5;
 }
