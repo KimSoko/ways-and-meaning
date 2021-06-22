@@ -5,7 +5,7 @@ import Bars from './Bars.jsx';
 const Ideas = () => {
   return (
     <div className="ideas">
-      <Barrs />
+      <Bars />
       <main>
         <h1>This is the Ideas Page</h1>
         <div>

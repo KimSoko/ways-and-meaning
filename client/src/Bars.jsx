@@ -1,14 +1,74 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { NavLink } from 'react-router-dom';
-import Start from './Start.jsx';
-import Ideas from './Ideas.jsx';
-import About from './About.jsx';
+import StartBox from './nav/StartBox.jsx';
+import AppBar from './nav/AppBar.jsx';
+// import AppBox from './nav/AppBox.jsx';
+import ToolkitBar from './nav/ToolkitBar.jsx';
+// import TooklitBox from './nav/ToolkitBox.jsx';
+import IdeasBar from './nav/IdeasBar.jsx';
+// import IdeasBox from './nav/IdeasBox.jsx';
+import AboutBar from './nav/AboutBar.jsx';
+// import AboutBox from './nav/AboutBox.jsx';
 
-const Bars = () => {
+const Bars = ({ display, setDisplay }) => {
+
+
   return (
-    <nav className="menu-main">
-      <ul className="menu-list">
+    <nav className="main-menu">
+      {display === 'start' && (
+        <>
+        <StartBox />
+        <AppBar />
+        <ToolkitBar />
+        <IdeasBar />
+        <AboutBar />
+        </>
+      )}
+      {/* {display === 'app' && (
+        <>
+        <AppBar />
+        <AppBox />
+        <ToolkitBar />
+        <IdeasBar />
+        <AboutBar />
+        </>
+      )}
+      {display === 'toolkit' && (
+        <>
+        <AppBar />
+        <ToolkitBar />
+        <ToolkitBox />
+        <IdeasBar />
+        <AboutBar />
+        </>
+      )}
+      {display === 'ideas' && (
+        <>
+        <AppBar />
+        <ToolkitBar />
+        <IdeasBar />
+        <IdeasBox />
+        <AboutBar />
+        </>
+      )}
+      {display === 'about' && (
+        <>
+        <AppBar />
+        <ToolkitBar />
+        <IdeasBar />
+        <AboutBar />
+        <AboutBox />
+        </>
+      )} */}
+    </nav>
+  )
+};
+
+export default Bars;
+
+/*
+<ul className="all-bars">
         <li className="app-bar">
           <NavLink exact activeClassName="menu-item-active" to="/decide">WHAT MATTERS MOST APP</NavLink>
         </li>
@@ -22,8 +82,4 @@ const Bars = () => {
           <NavLink exact activeClassName="menu-item-active" to="/about">ABOUT</NavLink>
         </li>
       </ul>
-    </nav>
-  )
-};
-
-export default Bars;
+      */

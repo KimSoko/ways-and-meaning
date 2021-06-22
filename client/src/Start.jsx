@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Bars from './Bars.jsx';
 
 const Start = () => {
+  const options = ['start', 'app', 'toolkit', 'ideas', 'about'];
+  const [ display, setDisplay ] = useState(options[0]);
+
   return (
     <div className="start-page-container">
       <div className="left-container">
@@ -13,7 +16,8 @@ const Start = () => {
         </div>
       </div>
       <div className="menu-container">
-       <Bars />
+       <Bars display={display}
+          setDisplay={setDisplay}/>
       </div>
     </div>
   )
