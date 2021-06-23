@@ -2,6 +2,7 @@ body {
   background-color: #FFFCF1;
   margin: 0;
   height: 100%;
+  width: 100%;
 }
 
 h1 {
@@ -10,6 +11,9 @@ h1 {
   color: #2B2F33;
   width: 30rem;
   margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-right: 0;
 }
 
 /* NAV BOX TITLES */
@@ -70,6 +74,7 @@ button {
 
 .start-page-container {
   display: flex;
+  width: 100%;
 }
 
 .start-button-div {
@@ -91,9 +96,11 @@ button {
 .main-menu {
   display: flex;
   height: 100%;
+  justify-content: flex-end;
 }
 
 .nav-bar {
+  cursor: pointer;
   padding-top: 30px;
   margin-right: 2px;
   writing-mode: vertical-rl;
@@ -103,12 +110,18 @@ button {
   flex: 0;
 }
 
-.nav-bar:hover {
-  width: 400px;
+.nav-bar:hover h4 {
   padding: 150px 20px 20px 20px;
-  flex: 1;
+  flex-grow: 1;
   writing-mode: horizontal-tb;
-  transition: all 1s ease;
+  width: 300px;
+  font-size: 30px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  margin-bottom: 100px;
+  transition-property: flex-grow, writing-mode, font-size, letter-spacing, font-weight;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
 }
 
 .app-bar {
