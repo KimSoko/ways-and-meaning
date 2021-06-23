@@ -5,11 +5,19 @@ import ToolkitBar from '../nav/ToolkitBar.jsx';
 import IdeasBar from '../nav/IdeasBar.jsx';
 import AboutBar from '../nav/AboutBar.jsx';
 
-const Purpose = () => {
+const Purpose = ({ handleDisplay, handleMouseEnter, handleMouseLeave, menuDisplay }) => {
   return (
     <div className="page-container">
-      <AppBar />
-      <ToolkitBar />
+      <AppBar
+        handleMouseEnter={handleMouseEnter}
+        handleMouseLeave={handleMouseLeave}
+        handleDisplay={handleDisplay}
+        menuDisplay={menuDisplay} />
+      <ToolkitBar
+        handleMouseEnter={handleMouseEnter}
+        handleMouseLeave={handleMouseLeave}
+        handleDisplay={handleDisplay}
+        menuDisplay={menuDisplay} />
       <div className="two-col-container">
         <div className="left-container">
           <h1>THE PURPOSE TOOLKIT</h1>
@@ -33,8 +41,16 @@ const Purpose = () => {
           </div>
         </div>
       </div>
-      <IdeasBar />
-      <AboutBar />
+      <IdeasBar
+        handleMouseEnter={handleMouseEnter}
+        handleMouseLeave={handleMouseLeave}
+        handleDisplay={handleDisplay}
+        menuDisplay={menuDisplay} />
+      <AboutBar
+        handleMouseEnter={handleMouseEnter}
+        handleMouseLeave={handleMouseLeave}
+        handleDisplay={handleDisplay}
+        menuDisplay={menuDisplay} />
     </div>
   )
 };
