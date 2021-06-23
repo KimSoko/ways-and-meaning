@@ -4,11 +4,6 @@ body {
   height: 100%;
 }
 
-.left-container {
-  margin: 80px 0 80px 80px;
-  width: 60%;
-}
-
 h1 {
   font-family: Helvetica,Arial,sans-serif;
   font-size: 100px;
@@ -82,8 +77,13 @@ button {
   padding: 10rem;
 }
 
-.menu-container {
+.left-container {
+  margin: 80px 0 80px 80px;
   flex: 1;
+}
+
+.menu-container {
+  flex: 0;
 }
 
 /******************* BARS ******************/
@@ -93,28 +93,22 @@ button {
   height: 100%;
 }
 
-.bar {
-  box-shadow: 5px 5px 10px darkgray;
-}
-
-.nav-bar-div {
+.nav-bar {
   padding-top: 30px;
-  padding-right: 10px;
+  margin-right: 2px;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   vertical-align: top;
+  box-shadow: 2px 2px 2px #2B2F33;
+  flex: 0;
 }
 
-.nav-box-div {
-  width: 100%;
+.nav-bar:hover {
+  width: 400px;
   padding: 150px 20px 20px 20px;
   flex: 1;
-  transition: all 1s;
-}
-
-#start-box {
-  height: 190px;
-  border-bottom: 5px #2B2F33 solid;
+  writing-mode: horizontal-tb;
+  transition: all 1s ease;
 }
 
 .app-bar {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
-const AppBar = ({ display }) => {
+const AppBarOld = ({ display }) => {
   const [ appExtended, setAppExtended ] = useState(false);
 
   useEffect(() => {
@@ -11,13 +11,15 @@ const AppBar = ({ display }) => {
   }, [display])
 
   return (
-    <div className="nav-bar app-bar">
+    <div className="bar app-bar">
       {display !== 'app' && (
+        <div className="nav-bar-div">
           <h4>WHAT MATTERS MOST APP</h4>
+        </div>
       )}
       {display === 'app' && (
         <CSSTransition in={appExtended} timeout={500} classNames="box-expanded">
-          <div className="nav-bar app-bar">
+          <div className="nav-box-div app-bar">
             <h2>WHAT MATTERS MOST APP</h2>
             <p>Making major life decisions is hard. This app should help make it a bit easier by helping you to prioritize what matters most.</p>
             <ol>
@@ -34,4 +36,4 @@ const AppBar = ({ display }) => {
   )
 };
 
-export default AppBar;
+export default AppBarOld;

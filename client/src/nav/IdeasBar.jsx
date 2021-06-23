@@ -2,14 +2,14 @@ import React from 'react';
 
 const IdeasBar = ({ display }) => {
   return (
-    <div className="bar ideas-bar">
+    <div className="nav-bar ideas-bar">
       {display !== 'ideas' && (
-        <div className="nav-bar-div">
+
           <h4>IDEAS</h4>
-        </div>
+
       )}
       {display === 'ideas' && (
-        <div className="nav-box-div">
+        <div className="nav-bar ideas-bar">
           <h2>IDEAS</h2>
           <p>I have a lot of opinions, and I love to write. My ideas are bits of wisdom I wrote that felt should be shared. A few include:</p>
           <ol>

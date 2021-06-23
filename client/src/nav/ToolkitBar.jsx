@@ -2,11 +2,11 @@ import React from 'react';
 
 const ToolkitBar = ({ display }) => {
   return (
-    <div className="bar toolkit-bar">
+    <div className="nav-bar toolkit-bar">
       {display !== 'toolkit' && (
-        <div className="nav-bar-div toolkit-bar">
+
           <h4>PURPOSE TOOLKIT</h4>
-        </div>
+
       )}
       {display === 'toolkit' && (
         <div className="nav-box-div toolkit-bar">

@@ -11,15 +11,15 @@ const AboutBar = ({ display }) => {
   }, [display])
 
   return (
-    <div className="bar about-bar">
+    <div className="nav-bar about-bar">
       {display !== 'about' && (
-        <div className="nav-bar-div">
+
           <h4>ABOUT</h4>
-        </div>
+
       )}
       {display === 'about' && (
         <CSSTransition in={expandAbout} timeout={500} classNames="box-expanded">
-          <div className="nav-box-div">
+          <div className="nav-bar about-bar">
             <h2>ABOUT</h2>
             <p>Hi, I'm Kim Soko Schaefer, the human behind this site. You might be wondering why I'm qualified to give you advice on betterr living. The truth is I'm not. No one is. But I've done a lot of things to help me street cred. Notably, I'm a...</p>
             <ol>

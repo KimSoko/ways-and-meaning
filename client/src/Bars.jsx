@@ -1,32 +1,23 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { NavLink } from 'react-router-dom';
-import StartBox from './nav/StartBox.jsx';
 import AppBar from './nav/AppBar.jsx';
 import ToolkitBar from './nav/ToolkitBar.jsx';
 import IdeasBar from './nav/IdeasBar.jsx';
 import AboutBar from './nav/AboutBar.jsx';
 
-const Bars = ({ display }) => {
+const Bars = ({ display, setDisplay }) => {
+  const handleHover = (e) => {
+    console.log(e.target);
+    setDisplay('app');
+  }
+
   return (
     <nav className="main-menu">
-      {display === 'start' && (
-        <>
-        <StartBox />
-        <AppBar display={display}/>
-        <ToolkitBar display={display}/>
-        <IdeasBar display={display}/>
-        <AboutBar display={display}/>
-        </>
-      )}
-      {display !== 'start' && (
-        <>
-        <AppBar display={display}/>
-        <ToolkitBar display={display}/>
-        <IdeasBar display={display}/>
-        <AboutBar display={display}/>
-        </>
-      )}
+      <AppBar onMounseEnter={handleHover} display={display} />
+      <ToolkitBar display={display} />
+      <IdeasBar display={display} />
+      <AboutBar display={display} />
     </nav>
   )
 };
