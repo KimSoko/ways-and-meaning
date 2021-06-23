@@ -1,16 +1,11 @@
 import React from 'react';
 
-const ToolkitBar = ({ display }) => {
+const ToolkitBar = ({ display, handleMouseEnter, handleMouseLeave }) => {
   return (
-    <div className="nav-bar toolkit-bar">
-      {display !== 'toolkit' && (
-
+    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="nav-bar toolkit-bar">
           <h4>PURPOSE TOOLKIT</h4>
-
-      )}
       {display === 'toolkit' && (
-        <div className="nav-box-div toolkit-bar">
-          <h2>PURPOSE TOOLKIT</h2>
+        <div className="nav-bar-expanded toolkit-bar">
           <p>A free toolkit to help you better know yourself and your purpose.</p>
           <ol>
             <li>The purpose framework minibook with printables of framework</li>

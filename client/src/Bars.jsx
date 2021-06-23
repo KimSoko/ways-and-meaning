@@ -6,18 +6,39 @@ import ToolkitBar from './nav/ToolkitBar.jsx';
 import IdeasBar from './nav/IdeasBar.jsx';
 import AboutBar from './nav/AboutBar.jsx';
 
-const Bars = ({ display, setDisplay }) => {
-  const handleHover = (e) => {
-    console.log(e.target);
-    setDisplay('app');
+const Bars = ({ display, setDisplay, options }) => {
+  const handleMouseEnter = (e) => {
+    let item = e.target.className;
+    for (let i = 0; i < options.length; i++) {
+      let currentOption = options[i];
+      if (item.includes(currentOption)) {
+        setDisplay(currentOption);
+      }
+    }
+  }
+
+  const handleMouseLeave = () => {
+    setDisplay('start');
   }
 
   return (
     <nav className="main-menu">
-      <AppBar onMounseEnter={handleHover} display={display} />
-      <ToolkitBar display={display} />
-      <IdeasBar display={display} />
-      <AboutBar display={display} />
+      <AppBar
+        handleMouseEnter={handleMouseEnter}
+        handleMouseLeave={handleMouseLeave}
+        display={display} />
+      <ToolkitBar
+        handleMouseEnter={handleMouseEnter}
+        handleMouseLeave={handleMouseLeave}
+        display={display} />
+      <IdeasBar
+        handleMouseEnter={handleMouseEnter}
+        handleMouseLeave={handleMouseLeave}
+        display={display} />
+      <AboutBar
+        handleMouseEnter={handleMouseEnter}
+        handleMouseLeave={handleMouseLeave}
+        display={display} />
     </nav>
   )
 };

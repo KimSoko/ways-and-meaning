@@ -92,6 +92,9 @@ button {
 }
 
 /******************* BARS ******************/
+#nav {
+  margin: 0px auto
+}
 
 .main-menu {
   display: flex;
@@ -112,16 +115,25 @@ button {
 
 .nav-bar:hover h4 {
   padding: 150px 20px 20px 20px;
-  flex-grow: 1;
+  flex: 1;
   writing-mode: horizontal-tb;
   width: 300px;
   font-size: 30px;
   letter-spacing: 4px;
+  text-align: left;
   font-weight: bold;
+  display: inline;
+  margin-block-end: 0px;
+  transition-property: flex, display, writing-mode, font-size, width;
+  transition-duration: 0.75s;
+}
+
+.nav-bar-expanded {
+  display: inline;
+  writing-mode: horizontal-tb;
+  width: 300px;
   margin-bottom: 100px;
-  transition-property: flex-grow, writing-mode, font-size, letter-spacing, font-weight;
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
+  transition: all 0.75s ease;
 }
 
 .app-bar {

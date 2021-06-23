@@ -31,8 +31,10 @@ const Start = () => {
         </div>
       </div>
       <div className="menu-container">
-       <Bars display={display}
-          setDisplay={setDisplay}/>
+       <Bars
+         options={options}
+         display={display}
+         setDisplay={setDisplay}/>
       </div>
     </div>
   )
