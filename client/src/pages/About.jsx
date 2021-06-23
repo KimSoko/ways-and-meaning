@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Bars from './Bars.jsx';
 
 const About = () => {
   return (

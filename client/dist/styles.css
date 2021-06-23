@@ -80,19 +80,9 @@ button {
 
 /*************** START *********************/
 
-.start-page-container {
-  display: flex;
-  width: 100%;
-}
-
 .start-button-div {
   width: 30rem;
   padding: 10rem;
-}
-
-.left-container {
-  margin: 80px 0 80px 80px;
-  flex: 1;
 }
 
 .menu-container {
@@ -188,8 +178,23 @@ button {
   margin-left: 80px;
 }
 
-/******************* DECIDE ******************/
+/******************* PAGES ******************/
 
-.decide-container {
+.page-container {
   display: flex;
+}
+
+.two-col-container {
+  display: flex;
+  width: 100%;
+}
+
+.left-container {
+  margin: 80px 0 80px 80px;
+  flex: 1;
+}
+
+.right-container {
+  flex: 0;
+  margin: 30px;
 }

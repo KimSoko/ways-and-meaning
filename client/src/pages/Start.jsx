@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import AppBar from './nav/AppBar.jsx';
-import ToolkitBar from './nav/ToolkitBar.jsx';
-import IdeasBar from './nav/IdeasBar.jsx';
-import AboutBar from './nav/AboutBar.jsx';
+import AppBar from '../nav/AppBar.jsx';
+import ToolkitBar from '../nav/ToolkitBar.jsx';
+import IdeasBar from '../nav/IdeasBar.jsx';
+import AboutBar from '../nav/AboutBar.jsx';
 
 const Start = ({ handleDisplay, handleMouseEnter, handleMouseLeave, menuDisplay }) => {
   return (
-    <div className="start-page-container">
+    <div className="two-col-container">
       <div className="left-container">
         <h1>Ways + Meaning</h1>
         <h3>Tools for living better</h3>

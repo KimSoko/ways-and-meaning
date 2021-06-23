@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
 import { Route, Switch } from 'react-router-dom';
-import Start from './Start.jsx';
-import Decide from './Decide.jsx';
-import Purpose from './Purpose.jsx';
-import Ideas from './Ideas.jsx';
+import Start from './pages/Start.jsx';
+import Decide from './pages/Decide.jsx';
+import Purpose from './pages/Purpose.jsx';
+import Ideas from './pages/Ideas.jsx';
 import Confidence from './ideas/Confidence.jsx';
-import About from './About.jsx';
-import Error from './Error.jsx';
+import About from './pages/About.jsx';
+import Error from './pages/Error.jsx';
 
 const App = () => {
   const options = ['start', 'app', 'toolkit', 'ideas', 'about'];
@@ -47,24 +46,44 @@ const App = () => {
   return (
     <div>
       <Switch>
-        <Route exact path='/' >
+        <Route exact path='/'>
           <Start
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
             handleDisplay={handleDisplay}
             menuDisplay={menuDisplay} />
         </Route>
-        <Route exact path='/app' >
+        <Route exact path='/app'>
           <Decide
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
             handleDisplay={handleDisplay}
             menuDisplay={menuDisplay} />
         </Route>
-        <Route exact path='/purpose' component={Purpose} />
-        <Route exact path='/ideas' component={Ideas} />
-        <Route exact path='/ideas/confidence' component={Confidence} />
-        <Route exact path='/about' component={About} />
+        <Route exact path='/purpose'>
+          <Purpose
+            handleMouseEnter={handleMouseEnter}
+            handleMouseLeave={handleMouseLeave}
+            handleDisplay={handleDisplay}
+            menuDisplay={menuDisplay} />
+        </Route>
+        <Route exact path='/ideas'>
+          <Ideas
+            handleMouseEnter={handleMouseEnter}
+            handleMouseLeave={handleMouseLeave}
+            handleDisplay={handleDisplay}
+            menuDisplay={menuDisplay} />
+        </Route>
+        <Route exact path='/ideas/confidence'>
+          <Confidence />
+        </Route>
+        <Route exact path='/about'>
+          <About
+            handleMouseEnter={handleMouseEnter}
+            handleMouseLeave={handleMouseLeave}
+            handleDisplay={handleDisplay}
+            menuDisplay={menuDisplay} />
+        </Route>
         <Route component={Error} />
       </Switch>
     </div>

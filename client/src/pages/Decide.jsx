@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AppBar from './nav/AppBar.jsx';
-import DecideApp from './DecideApp.jsx';
-import ToolkitBar from './nav/ToolkitBar.jsx';
-import IdeasBar from './nav/IdeasBar.jsx';
-import AboutBar from './nav/AboutBar.jsx';
+import AppBar from '../nav/AppBar.jsx';
+import DecideApp from '../wmm/DecideApp.jsx';
+import ToolkitBar from '../nav/ToolkitBar.jsx';
+import IdeasBar from '../nav/IdeasBar.jsx';
+import AboutBar from '../nav/AboutBar.jsx';
 
 const Decide = ({ handleDisplay, handleMouseEnter, handleMouseLeave, menuDisplay }) => {
   return (
-    <div className="decide-container">
+    <div className="page-container">
       <AppBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}

@@ -1,11 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Bars from './Bars.jsx';
 
 const Ideas = () => {
   return (
     <div className="ideas">
-      <Bars />
       <main>
         <h1>This is the Ideas Page</h1>
         <div>
