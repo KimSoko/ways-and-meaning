@@ -15,7 +15,9 @@ const AboutBar = ({ menuDisplay, handleDisplay, handleMouseEnter, handleMouseLea
             <li>Lover of Life</li>
           </ol>
           <p>(and I'm obsessed with brain science and decision making)</p>
-          <button className="about-bar-2 center">Get to know me</button>
+          <Link to="/about">
+            <button className="about-bar-2 center">Get to know me</button>
+          </Link>
         </div>
       )}
     </div>

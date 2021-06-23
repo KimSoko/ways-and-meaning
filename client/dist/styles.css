@@ -51,6 +51,7 @@ p {
 
 a {
   text-decoration: none;
+  flex: 0;
 }
 
 li {
@@ -60,6 +61,7 @@ li {
 }
 
 button {
+  margin-top: 50px;
   height: 100px;
   width: 100px;
   border-radius: 50%;
@@ -69,6 +71,7 @@ button {
   font-size: 16px;
   color: #EAB6E5;
   box-shadow: 3px 3px 5px darkgray;
+  cursor: pointer;
 }
 
 .center {
@@ -108,7 +111,6 @@ button {
 }
 
 .nav-bar {
-  cursor: pointer;
   padding-top: 30px;
   margin-right: 2px;
   writing-mode: vertical-rl;

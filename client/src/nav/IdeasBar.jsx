@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const IdeasBar = ({ menuDisplay, handleMouseEnter, handleMouseLeave }) => {
   return (
@@ -13,7 +14,9 @@ const IdeasBar = ({ menuDisplay, handleMouseEnter, handleMouseLeave }) => {
             <li>The Roadmap: a simple planning tool</li>
             <li>The Purpose Framework</li>
           </ol>
-          <button className="ideas-bar-2 center">Read on</button>
+          <Link to="/ideas">
+            <button className="ideas-bar-2 center">Read on</button>
+          </Link>
         </div>
       )}
     </div>

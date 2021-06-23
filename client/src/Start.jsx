@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import AppBar from './nav/AppBar.jsx';
 import ToolkitBar from './nav/ToolkitBar.jsx';
 import IdeasBar from './nav/IdeasBar.jsx';
@@ -16,36 +15,31 @@ const Start = ({ handleDisplay, handleMouseEnter, handleMouseLeave, menuDisplay 
         </div>
       </div>
       <div className="menu-container">
-      <nav className="main-menu">
-      <Link to='/app'>
-        <AppBar
-          handleMouseEnter={handleMouseEnter}
-          handleMouseLeave={handleMouseLeave}
-          handleDisplay={handleDisplay}
-          menuDisplay={menuDisplay} />
-      </Link>
-      <Link to="/purpose">
-        <ToolkitBar
-          handleMouseEnter={handleMouseEnter}
-          handleMouseLeave={handleMouseLeave}
-          handleDisplay={handleDisplay}
-          menuDisplay={menuDisplay} />
-      </Link>
-      <Link to="/ideas">
-        <IdeasBar
-          handleMouseEnter={handleMouseEnter}
-          handleMouseLeave={handleMouseLeave}
-          handleDisplay={handleDisplay}
-          menuDisplay={menuDisplay} />
-      </Link>
-      <Link to='/about'>
-        <AboutBar
-          handleMouseEnter={handleMouseEnter}
-          handleMouseLeave={handleMouseLeave}
-          handleDisplay={handleDisplay}
-          menuDisplay={menuDisplay} />
-      </Link>
-    </nav>
+        <nav className="main-menu">
+          <AppBar
+            handleMouseEnter={handleMouseEnter}
+            handleMouseLeave={handleMouseLeave}
+            handleDisplay={handleDisplay}
+            menuDisplay={menuDisplay} />
+
+          <ToolkitBar
+            handleMouseEnter={handleMouseEnter}
+            handleMouseLeave={handleMouseLeave}
+            handleDisplay={handleDisplay}
+            menuDisplay={menuDisplay} />
+
+          <IdeasBar
+            handleMouseEnter={handleMouseEnter}
+            handleMouseLeave={handleMouseLeave}
+            handleDisplay={handleDisplay}
+            menuDisplay={menuDisplay} />
+
+          <AboutBar
+            handleMouseEnter={handleMouseEnter}
+            handleMouseLeave={handleMouseLeave}
+            handleDisplay={handleDisplay}
+            menuDisplay={menuDisplay} />
+        </nav>
       </div>
     </div>
   )
