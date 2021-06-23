@@ -1,10 +1,10 @@
 import React from 'react';
 
-const AppBar = ({ display, handleMouseEnter, handleMouseLeave }) => {
+const AppBar = ({ menuDisplay, handleMouseEnter, handleMouseLeave, handleDisplay }) => {
   return (
-    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="nav-bar app-bar">
+    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleDisplay} className="nav-bar app-bar">
         <h4>WHAT MATTERS MOST APP</h4>
-      {display === 'app' && (
+      {menuDisplay === 'app' && (
         <div className="nav-bar-expanded">
           <p>Making major life decisions is hard. This app should help make it a bit easier by helping you to prioritize what matters most.</p>
           <ol>

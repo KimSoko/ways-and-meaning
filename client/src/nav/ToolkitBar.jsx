@@ -1,10 +1,10 @@
 import React from 'react';
 
-const ToolkitBar = ({ display, handleMouseEnter, handleMouseLeave }) => {
+const ToolkitBar = ({ menuDisplay, handleMouseEnter, handleMouseLeave }) => {
   return (
     <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="nav-bar toolkit-bar">
           <h4>PURPOSE TOOLKIT</h4>
-      {display === 'toolkit' && (
+      {menuDisplay === 'toolkit' && (
         <div className="nav-bar-expanded toolkit-bar">
           <p>A free toolkit to help you better know yourself and your purpose.</p>
           <ol>

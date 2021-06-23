@@ -1,26 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
-import Bars from './Bars.jsx';
+import { Link } from 'react-router-dom';
+import AppBar from './nav/AppBar.jsx';
+import ToolkitBar from './nav/ToolkitBar.jsx';
+import IdeasBar from './nav/IdeasBar.jsx';
+import AboutBar from './nav/AboutBar.jsx';
 
-const Start = () => {
-  const options = ['start', 'app', 'toolkit', 'ideas', 'about'];
-  const [ index, setIndex ] = useState(0);
-  const [ display, setDisplay ] = useState(options[index]);
-
-  const handleDisplay = () => {
-    let newIndex = index;
-    if (newIndex === options.length - 1) {
-      newIndex = 0;
-    } else {
-      newIndex++;
-    }
-    setIndex(newIndex)
-  }
-
-  useEffect(() => {
-    setDisplay(options[index])
-  }, [index])
-
+const Start = ({ handleDisplay, handleMouseEnter, handleMouseLeave, menuDisplay }) => {
   return (
     <div className="start-page-container">
       <div className="left-container">
@@ -31,10 +16,36 @@ const Start = () => {
         </div>
       </div>
       <div className="menu-container">
-       <Bars
-         options={options}
-         display={display}
-         setDisplay={setDisplay}/>
+      <nav className="main-menu">
+      <Link to='/app'>
+        <AppBar
+          handleMouseEnter={handleMouseEnter}
+          handleMouseLeave={handleMouseLeave}
+          handleDisplay={handleDisplay}
+          menuDisplay={menuDisplay} />
+      </Link>
+      <Link to="/purpose">
+        <ToolkitBar
+          handleMouseEnter={handleMouseEnter}
+          handleMouseLeave={handleMouseLeave}
+          handleDisplay={handleDisplay}
+          menuDisplay={menuDisplay} />
+      </Link>
+      <Link to="/ideas">
+        <IdeasBar
+          handleMouseEnter={handleMouseEnter}
+          handleMouseLeave={handleMouseLeave}
+          handleDisplay={handleDisplay}
+          menuDisplay={menuDisplay} />
+      </Link>
+      <Link to='/about'>
+        <AboutBar
+          handleMouseEnter={handleMouseEnter}
+          handleMouseLeave={handleMouseLeave}
+          handleDisplay={handleDisplay}
+          menuDisplay={menuDisplay} />
+      </Link>
+    </nav>
       </div>
     </div>
   )

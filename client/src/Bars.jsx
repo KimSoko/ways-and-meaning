@@ -1,44 +1,57 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import AppBar from './nav/AppBar.jsx';
 import ToolkitBar from './nav/ToolkitBar.jsx';
 import IdeasBar from './nav/IdeasBar.jsx';
 import AboutBar from './nav/AboutBar.jsx';
 
-const Bars = ({ display, setDisplay, options }) => {
+const Bars = ({ display, setDisplay, options, handleDisplay }) => {
+  const [menuDisplay, setMenuDisplay] = useState('start');
+
   const handleMouseEnter = (e) => {
     let item = e.target.className;
     for (let i = 0; i < options.length; i++) {
       let currentOption = options[i];
       if (item.includes(currentOption)) {
-        setDisplay(currentOption);
+        setMenuDisplay(currentOption);
       }
     }
   }
 
   const handleMouseLeave = () => {
-    setDisplay('start');
+    setMenuDisplay('start');
   }
 
   return (
     <nav className="main-menu">
-      <AppBar
-        handleMouseEnter={handleMouseEnter}
-        handleMouseLeave={handleMouseLeave}
-        display={display} />
-      <ToolkitBar
-        handleMouseEnter={handleMouseEnter}
-        handleMouseLeave={handleMouseLeave}
-        display={display} />
-      <IdeasBar
-        handleMouseEnter={handleMouseEnter}
-        handleMouseLeave={handleMouseLeave}
-        display={display} />
-      <AboutBar
-        handleMouseEnter={handleMouseEnter}
-        handleMouseLeave={handleMouseLeave}
-        display={display} />
+      <Link to='/app'>
+        <AppBar
+          handleMouseEnter={handleMouseEnter}
+          handleMouseLeave={handleMouseLeave}
+          handleDisplay={handleDisplay}
+          menuDisplay={menuDisplay} />
+      </Link>
+      <Link to="/purpose">
+        <ToolkitBar
+          handleMouseEnter={handleMouseEnter}
+          handleMouseLeave={handleMouseLeave}
+          handleDisplay={handleDisplay}
+          menuDisplay={menuDisplay} />
+      </Link>
+      <Link to="/ideas">
+        <IdeasBar
+          handleMouseEnter={handleMouseEnter}
+          handleMouseLeave={handleMouseLeave}
+          handleDisplay={handleDisplay}
+          menuDisplay={menuDisplay} />
+      </Link>
+      <Link to='/about'>
+        <AboutBar
+          handleMouseEnter={handleMouseEnter}
+          handleMouseLeave={handleMouseLeave}
+          handleDisplay={handleDisplay}
+          menuDisplay={menuDisplay} />
+      </Link>
     </nav>
   )
 };
