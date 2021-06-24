@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import AppBar from '../nav/AppBar.jsx';
 import ToolkitBar from '../nav/ToolkitBar.jsx';
@@ -48,7 +49,9 @@ const Purpose = ({ handleDisplay, handleMouseEnter, handleMouseLeave, menuDispla
               <h1>Purpose Toolkit</h1>
             </div>
             <div className="inline">
-              <button className="home-button">home</button>
+              <Link to="/">
+                <button className="home-button">home</button>
+              </Link>
             </div>
           </div>
 
@@ -72,7 +75,7 @@ const Purpose = ({ handleDisplay, handleMouseEnter, handleMouseLeave, menuDispla
               </form>
             </div>
             <div className="right-container">
-              <img className="right-image" src={image} alt="Purpose Framework"/>
+              <img className="right-image" src={image} alt="Purpose Framework" />
             </div>
           </div>
         </div>
