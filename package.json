@@ -4,9 +4,10 @@
   "description": "A website for mindful entrepreneurs",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "nodemon dist/server.js",
     "start-react": "webpack --mode=development --watch",
-    "test": "test"
+    "test": "test",
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
