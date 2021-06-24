@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const ESLintPlugin = require('eslint-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
 //const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -48,4 +49,12 @@ module.exports = {
       })
     ]
   },
+  resolve: {
+    fallback: {
+       "querystring": require.resolve("querystring-es3")
+    },
+    alias: {
+        path: require.resolve("path-browserify")
+    }
+}
 };

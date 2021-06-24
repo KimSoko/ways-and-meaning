@@ -14,6 +14,9 @@ bundle2.js
 bundle.js.LICENSE.txt
 bundle2.js.LICENSE.txt
 
+#API
+mailchimpAPI.js
+
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 

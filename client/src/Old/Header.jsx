@@ -1,9 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { NavLink } from 'react-router-dom';
-import Start from './Start.jsx';
-import Ideas from './Ideas.jsx';
-import About from './About.jsx';
+
 
 const Header = () => {
   return (

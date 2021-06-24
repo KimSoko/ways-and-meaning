@@ -1,7 +1,7 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import axios from 'axios';
 import AppBar from '../nav/AppBar.jsx';
-import DecideApp from '../wmm/DecideApp.jsx';
 import ToolkitBar from '../nav/ToolkitBar.jsx';
 import IdeasBar from '../nav/IdeasBar.jsx';
 import AboutBar from '../nav/AboutBar.jsx';
@@ -19,13 +19,13 @@ const Purpose = ({ handleDisplay, handleMouseEnter, handleMouseLeave, menuDispla
   };
 
   const handleEmail = () => {
-    // axios.post('/mailchimp', {email: email})
-    // .then((response) => {
-    //   console.log('From handleEmail ', response);
-    // })
-    // .catch((err) => {
-    //   console.log('From handleEmail ', err);
-    // })
+    axios.post('/mailchimp', {email: email})
+    .then((response) => {
+      console.log('From handleEmail ', response);
+    })
+    .catch((err) => {
+      console.log('From handleEmail ', err);
+    })
   };
 
   return (
@@ -54,7 +54,7 @@ const Purpose = ({ handleDisplay, handleMouseEnter, handleMouseLeave, menuDispla
           <h3>A gift for you</h3>
           <div className="two-col-container">
             <div className="left-container-nested top-margin">
-              <p>Let’s kick off this relationship right, the purpose toolkit includes:
+              <p>Let’s kick off this relationship with a gift. The purpose toolkit includes:
               </p>
               <ul>
                 <li>The purpose framework minibook with printables of framework</li>

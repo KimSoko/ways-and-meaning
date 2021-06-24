@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react/prop-types */
+import React from 'react';
 import AppBar from '../nav/AppBar.jsx';
 import ToolkitBar from '../nav/ToolkitBar.jsx';
 import IdeasBar from '../nav/IdeasBar.jsx';
