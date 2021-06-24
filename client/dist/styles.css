@@ -211,6 +211,10 @@ button {
   margin: 80px;
 }
 
+.right-image {
+  width: 30rem;
+}
+
 .text-container {
   width: 70%;
 }

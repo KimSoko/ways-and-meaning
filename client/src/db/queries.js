@@ -9,7 +9,7 @@ const postData = (req, res) => {
     if (err) {
       throw err;
     } else {
-      console.log('Successful POST to db ', result);
+      console.log('Successful POST to db ');
       res.send(result);
     }
   });
