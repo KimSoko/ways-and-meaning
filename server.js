@@ -1,7 +1,9 @@
 const express = require('express');
 const cors = require('cors');
-const app = express();
 const path = require('path');
+const pages = require('./client/src/backend/renderings.js');
+
+const app = express();
 
 let port = process.env.PORT;
 if (port == null || port == "") {
@@ -12,6 +14,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, './client/dist')));
 app.use(cors());
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/dist/index.html'));
+})
 
 if (process.env.NODE_ENV !== 'test') {
   app.listen(port, () => {
