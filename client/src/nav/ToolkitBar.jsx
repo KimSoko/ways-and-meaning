@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ToolkitBar = ({ menuDisplay, handleMouseEnter, handleMouseLeave }) => {
+const ToolkitBar = ({ menuDisplay, handleDisplay, handleMouseEnter, handleMouseLeave }) => {
   return (
-    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="nav-bar toolkit-bar">
+    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleDisplay} className="nav-bar toolkit-bar">
       <h4>PURPOSE TOOLKIT</h4>
       {menuDisplay === 'toolkit' && (
         <div className="nav-bar-expanded toolkit-bar">
