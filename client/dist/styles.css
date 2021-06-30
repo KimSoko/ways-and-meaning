@@ -231,6 +231,12 @@ button {
   font-size: 13px;
 }
 
+.background-img {
+  z-index: -1;
+  opacity: 0.4;
+  object-fit: fill;
+}
+
 /***************** OTHER *********************/
 form {
   display: flex;
