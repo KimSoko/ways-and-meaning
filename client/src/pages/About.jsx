@@ -52,13 +52,13 @@ const About = ({ handleMouseEnter, handleMouseLeave, handleDisplay, menuDisplay 
               <p>This project is my third child. My first two are human, small, and require my time and attention so unfortunately this baby doesn’t get much love these days. If things are a bit weird or broken, just let me know.</p>
               <p>I'm big on values. It's the best way to immediately know someone. Mine include:</p>
               <ul>
-                <li>Curiosity: in pursuit of wisdom, an unrelenting drive to learn, to create, to explore, to seek out what’s different and uncover new truths that need to be shared</li>
-                <li>Connection: to spirit, between people, ideas, thoughts and feelings</li>
-                <li>Progress: a focus on continuous improvement everyday, no matter how small or how slow</li>
-                <li>Calm: bringing a sense of peace and tranquility to all</li>
+                <li><strong>Curiosity:</strong> in pursuit of wisdom, an unrelenting drive to learn, to create, to explore, to seek out what’s different and uncover new truths that need to be shared</li>
+                <li><strong>Connection:</strong> to spirit, between people, ideas, thoughts and feelings</li>
+                <li><strong>Progress:</strong> a focus on continuous improvement everyday, no matter how small or how slow</li>
+                <li><strong>Calm:</strong> bringing a sense of peace and tranquility to all</li>
               </ul>
-              <p>You can reach me anytime at kim.s.schaefer@gmail.com</p>
-              <p>The code for this site can be found on GitHub</p>
+              <p>You can reach me anytime at <a href="mailto:kim.s.schaefer@gmail.com" target="_blank" rel="noreferrer"> kim.s.schaefer@gmail.com</a></p>
+              <p>The code for this site can be found on <a href="https://github.com/KimSoko/ways-and-meaning" target="_blank" rel="noreferrer">GitHub</a></p>
             </div>
             <div className="right-container">
               <img className="right-image" src={image} alt="Purpose Framework" />

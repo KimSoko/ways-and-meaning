@@ -4,14 +4,14 @@ import AppBar from '../nav/AppBar.jsx';
 import ToolkitBar from '../nav/ToolkitBar.jsx';
 import IdeasBar from '../nav/IdeasBar.jsx';
 import AboutBar from '../nav/AboutBar.jsx';
-import image from '../../dist/media/woman_with_sphere.jpeg';
+import image from '../../dist/media/background.png';
 
 const Start = ({ handleDisplay, handleMouseEnter, handleMouseLeave, menuDisplay }) => {
   return (
     <div className="two-col-container" style={{
       backgroundImage: 'url(' + image + ')',
       backgroundSize: 'contain',
-      backgroundPosition: '70% 100%',
+      backgroundPosition: '70%',
       backgroundRepeat: 'no-repeat'}}>
       <div className="left-container">
         <h1>Ways + Meaning</h1>
