@@ -4,7 +4,7 @@ import AppBar from '../nav/AppBar.jsx';
 import ToolkitBar from '../nav/ToolkitBar.jsx';
 import IdeasBar from '../nav/IdeasBar.jsx';
 import AboutBar from '../nav/AboutBar.jsx';
-import image from '../../dist/media/background.png';
+// import image from '../../dist/media/background.png';
 
 const Start = ({ handleDisplay, handleMouseEnter, handleMouseLeave, menuDisplay }) => {
   return (

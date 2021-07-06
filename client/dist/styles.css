@@ -73,7 +73,7 @@ button {
   font-family: Helvetica,Arial,sans-serif;
   font-size: 16px;
   color: #EAB6E5;
-  box-shadow: 3px 3px 5px darkgray;
+  box-shadow: 2px 2px 5px rgb(95, 77, 99);
   cursor: pointer;
 }
 
@@ -312,6 +312,7 @@ button {
   margin: 0;
   display: inline;
   color: #FFFCF1;
+  text-shadow: 0.5px 0.5px darkslateblue;
 }
 
 .back {
