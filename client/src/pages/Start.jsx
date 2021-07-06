@@ -8,11 +8,12 @@ import image from '../../dist/media/background.png';
 
 const Start = ({ handleDisplay, handleMouseEnter, handleMouseLeave, menuDisplay }) => {
   return (
-    <div className="two-col-container" style={{
+    <div className="two-col-container">
+      {/* style={{
       backgroundImage: 'url(' + image + ')',
       backgroundSize: 'contain',
       backgroundPosition: '70%',
-      backgroundRepeat: 'no-repeat'}}>
+      backgroundRepeat: 'no-repeat'}} */}
       <div className="left-container">
         <h1>Ways + Meaning</h1>
         <h3>Tools for living better</h3>

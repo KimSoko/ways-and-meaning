@@ -105,18 +105,17 @@ button {
 
 .nav-bar {
   padding-top: 30px;
-  margin-right: 2px;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   vertical-align: top;
-  box-shadow: 1px 1px 3px #2B2F33;
+  box-shadow: 2px 2px 5px rgb(95, 77, 99);
   flex: 0;
   height: 100%;
 }
 
 .nav-bar:hover h4 {
   transition-property: flex, writing-mode, font-size, width;
-  transition-duration: 0.75s;
+  transition-duration: 1s;
   padding: 150px 20px 20px 20px;
   flex: 1;
   writing-mode: horizontal-tb;
@@ -134,7 +133,7 @@ button {
   writing-mode: horizontal-tb;
   width: 300px;
   margin-bottom: 100px;
-  transition: all 0.75s ease;
+  transition: all 1s ease;
 }
 
 .app-bar {
@@ -235,6 +234,109 @@ button {
   z-index: -1;
   opacity: 0.4;
   object-fit: fill;
+}
+
+
+/************** CARDS **********************/
+.articles-div {
+  border-top: 5px #2B2F33 solid;
+  display: flex;
+  margin-top: 30px;
+  padding: 50px 50px 50px 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.articles-box {
+  width: 20rem;
+  height: 20rem;
+  margin-bottom: 50px;
+  transform-style: preserve-3d;
+  box-sizing: border-box;
+}
+
+.articles-box .flipped .front{
+  transform: rotateY(180deg);
+  transition: -webkit-transform ease 500ms;
+    transition: transform ease 500ms;
+}
+
+.articles-box:hover .flipped .back{
+  transform: rotateY(0deg);
+  transition: all ease 500ms;
+    transition: all ease 500ms;
+}
+
+.front,
+.back {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    display: block;
+    box-shadow: 2px 2px 5px rgb(95, 77, 99);
+    position: absolute;
+    transform-style: preserve-3d;
+
+}
+
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    position: relative;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card-image {
+ opacity: 0.7;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ object-position: 100% 0%;
+}
+
+.title {
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 30px;
+  letter-spacing: 0;
+  font-weight: bold;
+  margin: 0;
+  display: inline;
+  color: #FFFCF1;
+}
+
+.back {
+    /* transform: rotateY(-180deg); */
+    padding: 20px;
+    font-size: 14px;
+    background-color: #E5E4FC;
+    color: #1D4763;
+    text-align: center;
+    /* back tile styles go here! */
+}
+
+.read-more {
+  margin-top: 0px;
+  background-color: #E5E4FC;
+  border-radius: 0%;
+  border: none;
+  background-color: none;
+  color: #1D4763;
+  box-shadow: none;
+  cursor: pointer;
+  margin: 5px;
+  padding: 0;
+  height: 10px;
+  width: 100%;
 }
 
 /***************** OTHER *********************/
