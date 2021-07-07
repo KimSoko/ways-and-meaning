@@ -67,7 +67,13 @@ const App = () => {
             menuDisplay={menuDisplay}
           />
         </Route>
-        <Route component={Error} />
+        <Route>
+          <Error
+            handleMouseEnter={handleMouseEnter}
+            handleMouseLeave={handleMouseLeave}
+            menuDisplay={menuDisplay}
+          />
+        </Route>
       </Switch>
     </div>
   )

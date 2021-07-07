@@ -5,11 +5,17 @@ import AppBar from '../nav/AppBar.jsx';
 import ToolkitBar from '../nav/ToolkitBar.jsx';
 import IdeasBar from '../nav/IdeasBar.jsx';
 import AboutBar from '../nav/AboutBar.jsx';
-import image from '../../dist/media/whoops.jpg'
+import image from '../../dist/media/error-2.png'
 
 const Error = ({ handleMouseEnter, handleMouseLeave, menuDisplay }) => {
   return (
     <div className="two-col-container">
+      <div className="outer-left-container" style={{
+          backgroundImage: 'url(' + image + ')',
+          backgroundSize: 'cover',
+          backgroundPosition: '100%',
+          backgroundRepeat: 'no-repeat'
+        }}>
       <div className="left-container">
         <h1>Whoops, my bad.</h1>
         <h3>I messed up and sent you nowhere. Maybe you were trying to...</h3>
@@ -21,7 +27,7 @@ const Error = ({ handleMouseEnter, handleMouseLeave, menuDisplay }) => {
             <Link to='/about'><li>Learn more about me?</li></Link>
             <li>Anything else? <a href="mailto:kim.s.schaefer@gmail.com" target="_blank" rel="noreferrer">Email me</a> and let me know what you need</li>
           </ul>
-          <img className="error-img" src={image} />
+        </div>
         </div>
       </div>
       <div className="menu-container">

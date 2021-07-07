@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -55,7 +56,7 @@ const About = ({ handleMouseEnter, handleMouseLeave, menuDisplay }) => {
 
               <p>I created Ways + Meaning to collect and share wisdom about better living.</p>
               <p>I'm a strategy consultant, a software engineer, and am passionate about the science of enjoying life.</p>
-              <p>This project is my third child. My first two are human, small, and require my time and attention so unfortunately this baby doesn’t get much love these days. If things are a bit weird or broken, just let me know.</p>
+              {/* <p>This project is my third child. My first two are human, small, and require my time and attention so unfortunately this baby doesn’t get much love these days. If things are a bit weird or broken, just let me know.</p> */}
               <p>I'm big on values. It's the best way to immediately know someone. Mine include:</p>
               <ul>
                 <li><strong>Curiosity:</strong> in pursuit of wisdom, an unrelenting drive to learn, to create, to explore, to seek out what’s different and uncover new truths that need to be shared</li>
