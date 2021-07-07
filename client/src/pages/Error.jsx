@@ -7,7 +7,7 @@ import IdeasBar from '../nav/IdeasBar.jsx';
 import AboutBar from '../nav/AboutBar.jsx';
 import image from '../../dist/media/whoops.jpg'
 
-const Error = ({ handleDisplay, handleMouseEnter, handleMouseLeave, menuDisplay }) => {
+const Error = ({ handleMouseEnter, handleMouseLeave, menuDisplay }) => {
   return (
     <div className="two-col-container">
       <div className="left-container">
@@ -29,26 +29,26 @@ const Error = ({ handleDisplay, handleMouseEnter, handleMouseLeave, menuDisplay 
           <AppBar
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
-            handleDisplay={handleDisplay}
-            menuDisplay={menuDisplay} />
+            menuDisplay={menuDisplay}
+          />
 
           <ToolkitBar
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
-            handleDisplay={handleDisplay}
-            menuDisplay={menuDisplay} />
+            menuDisplay={menuDisplay}
+          />
 
           <IdeasBar
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
-            handleDisplay={handleDisplay}
-            menuDisplay={menuDisplay} />
+            menuDisplay={menuDisplay}
+          />
 
           <AboutBar
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
-            handleDisplay={handleDisplay}
-            menuDisplay={menuDisplay} />
+            menuDisplay={menuDisplay}
+          />
         </nav>
       </div>
     </div>

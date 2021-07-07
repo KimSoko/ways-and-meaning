@@ -335,15 +335,13 @@ button {
     /* transform: rotateY(-180deg); */
     padding: 20px;
     font-size: 14px;
-    background-color: #E5E4FC;
-    color: #1D4763;
-    text-align: center;
-    /* back tile styles go here! */
+    background-color: #FFFCF1
+    color: #2B2F33
 }
 
 .read-more {
   margin-top: 0px;
-  background-color: #E5E4FC;
+  background-color: #FFFCF1;
   border-radius: 0%;
   border: none;
   background-color: none;
@@ -354,6 +352,10 @@ button {
   padding: 0;
   height: 10px;
   width: 100%;
+}
+
+.blurb {
+  margin-block-end: 15px;
 }
 
 /***************** OTHER *********************/

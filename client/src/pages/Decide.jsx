@@ -6,30 +6,30 @@ import ToolkitBar from '../nav/ToolkitBar.jsx';
 import IdeasBar from '../nav/IdeasBar.jsx';
 import AboutBar from '../nav/AboutBar.jsx';
 
-const Decide = ({ handleDisplay, handleMouseEnter, handleMouseLeave, menuDisplay }) => {
+const Decide = ({ handleMouseEnter, handleMouseLeave, menuDisplay }) => {
   return (
     <div className="page-container">
       <AppBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
-        handleDisplay={handleDisplay}
-        menuDisplay={menuDisplay} />
+        menuDisplay={menuDisplay}
+      />
       <DecideApp />
       <ToolkitBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
-        handleDisplay={handleDisplay}
-        menuDisplay={menuDisplay} />
+        menuDisplay={menuDisplay}
+      />
       <IdeasBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
-        handleDisplay={handleDisplay}
-        menuDisplay={menuDisplay} />
+        menuDisplay={menuDisplay}
+      />
       <AboutBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
-        handleDisplay={handleDisplay}
-        menuDisplay={menuDisplay} />
+        menuDisplay={menuDisplay}
+      />
     </div>
   )
 };

@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -9,7 +8,7 @@ import IdeasBar from '../nav/IdeasBar.jsx';
 import AboutBar from '../nav/AboutBar.jsx';
 import image from '../../dist/media/Purpose_Framework.png';
 
-const Purpose = ({ handleDisplay, handleMouseEnter, handleMouseLeave, menuDisplay }) => {
+const Purpose = ({ handleMouseEnter, handleMouseLeave, menuDisplay }) => {
   const [email, setEmail] = useState('');
 
   const handleClick = (e) => {
@@ -35,13 +34,13 @@ const Purpose = ({ handleDisplay, handleMouseEnter, handleMouseLeave, menuDispla
       <AppBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
-        handleDisplay={handleDisplay}
-        menuDisplay={menuDisplay} />
+        menuDisplay={menuDisplay}
+        />
       <ToolkitBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
-        handleDisplay={handleDisplay}
-        menuDisplay={menuDisplay} />
+        menuDisplay={menuDisplay}
+        />
       <div className="two-col-container">
         <div className="left-container">
           <div className="two-col-container">
@@ -83,13 +82,13 @@ const Purpose = ({ handleDisplay, handleMouseEnter, handleMouseLeave, menuDispla
       <IdeasBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
-        handleDisplay={handleDisplay}
-        menuDisplay={menuDisplay} />
+        menuDisplay={menuDisplay}
+      />
       <AboutBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
-        handleDisplay={handleDisplay}
-        menuDisplay={menuDisplay} />
+        menuDisplay={menuDisplay}
+        />
     </div>
   )
 };

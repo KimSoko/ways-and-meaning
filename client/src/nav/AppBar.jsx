@@ -3,9 +3,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AppBar = ({ menuDisplay, handleMouseEnter, handleMouseLeave, handleDisplay }) => {
+const AppBar = ({ menuDisplay, handleMouseEnter, handleMouseLeave }) => {
   return (
-    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleDisplay} className="nav-bar app-bar">
+    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="nav-bar app-bar">
       <h4>WHAT MATTERS MOST APP</h4>
       {menuDisplay === 'app' && (
         <div className="nav-bar-expanded">
@@ -26,3 +26,6 @@ const AppBar = ({ menuDisplay, handleMouseEnter, handleMouseLeave, handleDisplay
 };
 
 export default AppBar;
+
+// props: handleDisplay
+// onClick={handleDisplay}
