@@ -6,7 +6,7 @@ import AppBar from '../nav/AppBar.jsx';
 import ToolkitBar from '../nav/ToolkitBar.jsx';
 import IdeasBar from '../nav/IdeasBar.jsx';
 import AboutBar from '../nav/AboutBar.jsx';
-import image from '../../dist/media/Purpose_Framework.png';
+import image from '../../dist/media/about.png';
 
 const About = ({ handleMouseEnter, handleMouseLeave, handleDisplay, menuDisplay }) => {
   return (
@@ -32,21 +32,28 @@ const About = ({ handleMouseEnter, handleMouseLeave, handleDisplay, menuDisplay 
         handleDisplay={handleDisplay}
         menuDisplay={menuDisplay} />
       <div className="two-col-container">
-        <div className="left-container">
-          <div className="two-col-container">
-            <div className="left-container-nested">
-              <h1>About me</h1>
-            </div>
-            <div className="inline">
-              <Link to="/">
-                <button className="home-button">home</button>
-              </Link>
+        <div className="outer-left-container" style={{
+          backgroundImage: 'url(' + image + ')',
+          backgroundSize: 'cover',
+          backgroundPosition: '100%',
+          backgroundRepeat: 'no-repeat'
+        }}>
+          <div className="left-container">
+            <div className="two-col-container">
+              <div className="left-container-nested">
+                <h1>About me</h1>
+              </div>
+              <div className="inline">
+                <Link to="/">
+                  <button className="home-button">home</button>
+                </Link>
+              </div>
             </div>
           </div>
+          <div className="left-container">
+            <h3>Hi, I'm Kim Soko Schaefer</h3>
+            <div className="inner-text">
 
-          <h3>Hi, I'm Kim Soko Schaefer</h3>
-          <div className="two-col-container">
-            <div className="left-container-nested top-margin">
               <p>I created Ways + Meaning to collect and share wisdom about better living.</p>
               <p>I'm a strategy consultant, a software engineer, and am passionate about the science of enjoying life.</p>
               <p>This project is my third child. My first two are human, small, and require my time and attention so unfortunately this baby doesn’t get much love these days. If things are a bit weird or broken, just let me know.</p>
@@ -59,9 +66,6 @@ const About = ({ handleMouseEnter, handleMouseLeave, handleDisplay, menuDisplay 
               </ul>
               <p>You can reach me anytime at <a href="mailto:kim.s.schaefer@gmail.com" target="_blank" rel="noreferrer"> kim.s.schaefer@gmail.com</a></p>
               <p>The code for this site can be found on <a href="https://github.com/KimSoko/ways-and-meaning" target="_blank" rel="noreferrer">GitHub</a></p>
-            </div>
-            <div className="right-container">
-              <img className="right-image" src={image} alt="Purpose Framework" />
             </div>
           </div>
         </div>
