@@ -9,10 +9,10 @@ import AboutBar from '../nav/AboutBar.jsx';
 import Card from './Card.jsx';
 import image1 from '../../dist/media/confidence.jpg';
 import image2 from '../../dist/media/Purpose_Framework_2.png';
-import image3 from '../../dist/media/lifestyle_business.png';
+import image3 from '../../dist/media/lifestyle_business_model.jpg';
 import image4 from '../../dist/media/roadmap.jpg';
-import image5 from '../../dist/media/Avoid_digital_distractions.png';
-import image6 from '../../dist/media/mindfulness.png';
+import image5 from '../../dist/media/vintage_computer_lab.jpg';
+import image6 from '../../dist/media/mindful_woman.jpg';
 
 
 const Ideas = ({ handleMouseEnter, handleMouseLeave, handleDisplay, menuDisplay }) => {
