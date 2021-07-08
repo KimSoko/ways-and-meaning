@@ -51,7 +51,7 @@ const App = () => {
             handleMouseLeave={handleMouseLeave}
             handleMenuClick={handleMenuClick}
             menuDisplay={menuDisplay}
-            pageDisplay={pageDisplay} />
+            pageDisplay='start' />
         </Route>
         <Route exact path='/app'>
         <Page
@@ -59,7 +59,7 @@ const App = () => {
             handleMouseLeave={handleMouseLeave}
             handleMenuClick={handleMenuClick}
             menuDisplay={menuDisplay}
-            pageDisplay={pageDisplay} />
+            pageDisplay="app" />
         </Route>
         <Route exact path='/purpose'>
         <Page
@@ -67,7 +67,7 @@ const App = () => {
             handleMouseLeave={handleMouseLeave}
             handleMenuClick={handleMenuClick}
             menuDisplay={menuDisplay}
-            pageDisplay={pageDisplay} />
+            pageDisplay="purpose" />
         </Route>
         <Route exact path='/ideas'>
         <Page
@@ -75,7 +75,7 @@ const App = () => {
             handleMouseLeave={handleMouseLeave}
             handleMenuClick={handleMenuClick}
             menuDisplay={menuDisplay}
-            pageDisplay={pageDisplay} />
+            pageDisplay="ideas" />
         </Route>
         <Route exact path='/ideas/confidence'>
         <Page
@@ -91,14 +91,15 @@ const App = () => {
             handleMouseLeave={handleMouseLeave}
             handleMenuClick={handleMenuClick}
             menuDisplay={menuDisplay}
-            pageDisplay={pageDisplay} />
+            pageDisplay="about" />
         </Route>
         <Route path=''>
-          <Error
+          <Page
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
             handleMenuClick={handleMenuClick}
             menuDisplay={menuDisplay}
+            pageDisplay="error"
           />
         </Route>
       </Switch>

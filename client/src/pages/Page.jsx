@@ -9,6 +9,7 @@ import Decide from './Decide.jsx';
 import Purpose from './Purpose.jsx';
 import Ideas from './Ideas.jsx';
 import About from './About.jsx';
+import Error from './Error.jsx';
 
 const Page = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay, pageDisplay }) => {
 
@@ -16,6 +17,9 @@ const Page = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay
     <div className="page-container">
       {pageDisplay === 'start' && (
         <Start />
+      )}
+      {pageDisplay === 'error' && (
+        <Error />
       )}
       <AppBar
         handleMouseEnter={handleMouseEnter}
