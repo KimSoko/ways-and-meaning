@@ -2,10 +2,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AppBar from '../nav/AppBar.jsx';
-import ToolkitBar from '../nav/ToolkitBar.jsx';
-import IdeasBar from '../nav/IdeasBar.jsx';
-import AboutBar from '../nav/AboutBar.jsx';
+// import AppBar from '../nav/AppBar.jsx';
+// import ToolkitBar from '../nav/ToolkitBar.jsx';
+// import IdeasBar from '../nav/IdeasBar.jsx';
+// import AboutBar from '../nav/AboutBar.jsx';
 import Card from './Card.jsx';
 import image1 from '../../dist/media/confidence.jpg';
 import image2 from '../../dist/media/Purpose_Framework_2.png';
@@ -15,24 +15,27 @@ import image5 from '../../dist/media/vintage_computer_lab.jpg';
 import image6 from '../../dist/media/mindful_woman.jpg';
 
 
-const Ideas = ({ handleMouseEnter, handleMouseLeave, menuDisplay }) => {
+const Ideas = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay }) => {
   return (
     <div className="page-container">
-      <AppBar
+      {/* <AppBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
+        handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay}
       />
       <ToolkitBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
+        handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay}
       />
       <IdeasBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
+        handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay}
-      />
+      /> */}
       <div className="two-col-container">
         <div className="left-container">
           <div className="two-col-container">
@@ -80,11 +83,12 @@ const Ideas = ({ handleMouseEnter, handleMouseLeave, menuDisplay }) => {
           </div>
         </div>
       </div>
-      <AboutBar
+      {/* <AboutBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
+        handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay}
-      />
+      /> */}
     </div>
   )
 };

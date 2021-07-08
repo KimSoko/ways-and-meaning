@@ -2,13 +2,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import AppBar from '../nav/AppBar.jsx';
-import ToolkitBar from '../nav/ToolkitBar.jsx';
-import IdeasBar from '../nav/IdeasBar.jsx';
-import AboutBar from '../nav/AboutBar.jsx';
+// import AppBar from '../nav/AppBar.jsx';
+// import ToolkitBar from '../nav/ToolkitBar.jsx';
+// import IdeasBar from '../nav/IdeasBar.jsx';
+// import AboutBar from '../nav/AboutBar.jsx';
 import image from '../../dist/media/Purpose_Framework.png';
 
-const Purpose = ({ handleMouseEnter, handleMouseLeave, menuDisplay }) => {
+const Purpose = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay }) => {
   const [email, setEmail] = useState('');
 
   const handleClick = (e) => {
@@ -31,16 +31,18 @@ const Purpose = ({ handleMouseEnter, handleMouseLeave, menuDisplay }) => {
 
   return (
     <div className="page-container">
-      <AppBar
+      {/* <AppBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
+        handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay}
         />
       <ToolkitBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
+        handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay}
-        />
+        /> */}
       <div className="two-col-container">
         <div className="left-container">
           <div className="two-col-container">
@@ -79,16 +81,18 @@ const Purpose = ({ handleMouseEnter, handleMouseLeave, menuDisplay }) => {
           </div>
         </div>
       </div>
-      <IdeasBar
+      {/* <IdeasBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
+        handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay}
       />
       <AboutBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
+        handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay}
-        />
+        /> */}
     </div>
   )
 };

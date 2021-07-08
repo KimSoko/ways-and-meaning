@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const IdeasBar = ({ menuDisplay, handleMouseEnter, handleMouseLeave }) => {
+const IdeasBar = ({ menuDisplay, handleMouseEnter, handleMouseLeave, handleMenuClick }) => {
   return (
     <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="nav-bar ideas-bar">
       <h4>IDEAS</h4>
@@ -16,7 +16,7 @@ const IdeasBar = ({ menuDisplay, handleMouseEnter, handleMouseLeave }) => {
             <li>The Purpose Framework</li>
           </ol>
           <Link to="/ideas">
-            <button className="ideas-bar-2 center">Read on</button>
+            <button onClick={handleMenuClick} className="ideas-bar-2 center">Read on</button>
           </Link>
         </div>
       )}

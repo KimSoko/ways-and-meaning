@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AppBar = ({ menuDisplay, handleMouseEnter, handleMouseLeave }) => {
+const AppBar = ({ menuDisplay, handleMouseEnter, handleMouseLeave, handleMenuClick }) => {
   return (
     <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="nav-bar app-bar">
       <h4>WHAT MATTERS MOST APP</h4>
@@ -17,7 +17,7 @@ const AppBar = ({ menuDisplay, handleMouseEnter, handleMouseLeave }) => {
             <li>Review your results and make smarter choices</li>
           </ol>
           <Link to="/app">
-            <button className="app-bar-2 center">Try it out</button>
+            <button onClick={handleMenuClick} className="app-bar-2 center">Try it out</button>
           </Link>
         </div>
       )}

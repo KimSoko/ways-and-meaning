@@ -2,12 +2,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ToolkitBar = ({ menuDisplay, handleDisplay, handleMouseEnter, handleMouseLeave }) => {
+const PurposeBar = ({ menuDisplay, handleMenuClick, handleMouseEnter, handleMouseLeave }) => {
   return (
-    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleDisplay} className="nav-bar toolkit-bar">
+    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleMenuClick} className="nav-bar purpose-bar">
       <h4>PURPOSE TOOLKIT</h4>
-      {menuDisplay === 'toolkit' && (
-        <div className="nav-bar-expanded toolkit-bar">
+      {menuDisplay === 'purpose' && (
+        <div className="nav-bar-expanded purpose-bar">
           <p>A free toolkit to help you better know yourself and your purpose.</p>
           <ol>
             <li>The purpose framework minibook with printables of framework</li>
@@ -17,7 +17,7 @@ const ToolkitBar = ({ menuDisplay, handleDisplay, handleMouseEnter, handleMouseL
           </ol>
           <p>BONUS: A basic budget tracker (because we all need it)</p>
           <Link to="/purpose">
-            <button className="toolkit-bar-2 center">Get Yours!</button>
+            <button className="purpose-bar-2 center">Get Yours!</button>
           </Link>
         </div>
       )}
@@ -25,4 +25,4 @@ const ToolkitBar = ({ menuDisplay, handleDisplay, handleMouseEnter, handleMouseL
   )
 };
 
-export default ToolkitBar;
+export default PurposeBar;

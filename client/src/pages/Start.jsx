@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import AppBar from '../nav/AppBar.jsx';
-import ToolkitBar from '../nav/ToolkitBar.jsx';
-import IdeasBar from '../nav/IdeasBar.jsx';
-import AboutBar from '../nav/AboutBar.jsx';
+// import AppBar from '../nav/AppBar.jsx';
+// import ToolkitBar from '../nav/ToolkitBar.jsx';
+// import IdeasBar from '../nav/IdeasBar.jsx';
+// import AboutBar from '../nav/AboutBar.jsx';
 import image from '../../dist/media/background_3.png';
 
-const Start = ({ handleMouseEnter, handleMouseLeave, menuDisplay }) => {
+const Start = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay }) => {
   return (
     <div className="two-col-container"  >
       <div className="outer-left-container" style={{
@@ -20,29 +20,33 @@ const Start = ({ handleMouseEnter, handleMouseLeave, menuDisplay }) => {
           <h3>Tools for living better</h3>
         </div>
       </div>
-      <div className="menu-container">
+      {/* <div className="menu-container">
         <nav className="main-menu">
           <AppBar
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
+            handleMenuClick={handleMenuClick}
             menuDisplay={menuDisplay} />
 
           <ToolkitBar
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
+            handleMenuClick={handleMenuClick}
             menuDisplay={menuDisplay} />
 
           <IdeasBar
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
+            handleMenuClick={handleMenuClick}
             menuDisplay={menuDisplay} />
 
           <AboutBar
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
+            handleMenuClick={handleMenuClick}
             menuDisplay={menuDisplay} />
         </nav>
-      </div>
+      </div> */}
     </div>
   )
 };

@@ -2,35 +2,39 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AppBar from '../nav/AppBar.jsx';
-import ToolkitBar from '../nav/ToolkitBar.jsx';
-import IdeasBar from '../nav/IdeasBar.jsx';
-import AboutBar from '../nav/AboutBar.jsx';
+// import AppBar from '../nav/AppBar.jsx';
+// import ToolkitBar from '../nav/ToolkitBar.jsx';
+// import IdeasBar from '../nav/IdeasBar.jsx';
+// import AboutBar from '../nav/AboutBar.jsx';
 import image from '../../dist/media/about.png';
 
-const About = ({ handleMouseEnter, handleMouseLeave, menuDisplay }) => {
+const About = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay }) => {
   return (
     <div className="page-container">
-      <AppBar
+      {/* <AppBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
+        handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay}
       />
       <ToolkitBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
+        handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay}
       />
       <IdeasBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
+        handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay}
       />
       <AboutBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
+        handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay}
-      />
+      /> */}
       <div className="two-col-container">
         <div className="outer-left-container" style={{
           backgroundImage: 'url(' + image + ')',

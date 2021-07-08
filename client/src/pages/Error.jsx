@@ -2,12 +2,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AppBar from '../nav/AppBar.jsx';
-import ToolkitBar from '../nav/ToolkitBar.jsx';
+import PurposeBar from '../nav/PurposeBar.jsx';
 import IdeasBar from '../nav/IdeasBar.jsx';
 import AboutBar from '../nav/AboutBar.jsx';
 import image from '../../dist/media/error-2.png'
 
-const Error = ({ handleMouseEnter, handleMouseLeave, menuDisplay }) => {
+const Error = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay }) => {
   return (
     <div className="two-col-container">
       <div className="outer-left-container" style={{
@@ -35,24 +35,28 @@ const Error = ({ handleMouseEnter, handleMouseLeave, menuDisplay }) => {
           <AppBar
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
+            handleMenuClick={handleMenuClick}
             menuDisplay={menuDisplay}
           />
 
-          <ToolkitBar
+          <PurposeBar
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
+            handleMenuClick={handleMenuClick}
             menuDisplay={menuDisplay}
           />
 
           <IdeasBar
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
+            handleMenuClick={handleMenuClick}
             menuDisplay={menuDisplay}
           />
 
           <AboutBar
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
+            handleMenuClick={handleMenuClick}
             menuDisplay={menuDisplay}
           />
         </nav>

@@ -132,8 +132,6 @@ button {
   display: inline;
   writing-mode: horizontal-tb;
   width: 300px;
-  margin-bottom: 100px;
-  transition: all 1s ease;
 }
 
 .app-bar {
@@ -147,12 +145,12 @@ button {
   margin-left: 80px;
 }
 
-.toolkit-bar {
+.purpose-bar {
   background-color: #EAB6E5;
   color: #E15400;
 }
 
-.toolkit-bar-2 {
+.purpose-bar-2 {
   background-color: #E5E4FC;
   color: #497F5E;
   margin-left: 80px;
