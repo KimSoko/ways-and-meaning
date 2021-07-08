@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import image from '../../dist/media/error-2.png'
+import image from '../../dist/media/error.png'
 
 const Error = () => {
   return (

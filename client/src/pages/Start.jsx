@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../../dist/media/background_3.png';
+import image from '../../dist/media/background.png';
 
 const Start = () => {
   return (

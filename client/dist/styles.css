@@ -201,7 +201,11 @@ button {
 
 .inner-text {
   width: 600px;
-  margin-top: 100px;
+  margin-top: 70px;
+  background-color: rgba(255, 252, 241, .7);
+  padding: 20px;
+  height: calc(400px / var(--size-divisor));
+  overflow-y: scroll;
 }
 
 .with-img {
@@ -218,6 +222,7 @@ button {
 .top-margin {
   margin-top: 80px;
 }
+
 
 .right-container {
   flex: 0;
@@ -250,6 +255,10 @@ button {
   object-fit: fill;
 }
 
+.no-top-margin {
+  margin-top: 0;
+  padding: 0;
+}
 
 /************** CARDS **********************/
 .articles-div {
@@ -401,4 +410,68 @@ input:focus {
   height: 30%;
   object-fit: contain;
   margin: 0 50px 50px 50px;
+}
+
+/*************** WMM ******************/
+
+.wmm-topic-container {
+  height: 50px;
+  width: 355px;
+  background-color: #497F5E;
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 24px;
+  float: left;
+  padding: 30px;
+}
+
+.wmm-dropdown-container {
+  overflow: hidden;
+  display: inline;
+}
+
+.wmm-dropdown-container a{
+  float: left;
+  font-size: 18px;
+  color:#FFFCF1;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.dropdown-hidden {
+  display: inline;
+  overflow: hidden;
+}
+
+.dropdown-caret {
+  display: inline;
+  color: #E5E4FC;
+  padding-left: 5px;
+  z-index: 1;
+}
+
+#sortCaret {
+  display: inline;
+  margin-left: 15px;
+  float: none;
+}
+
+.dropdown-visible {
+  display: inline;
+  overflow: auto;
+}
+
+.dropdown-content {
+  display: block;
+  font-size: 16px;
+  color: #FFFCF1;
+  line-height: 2;
+  padding: 10px;
+  padding-left: -30px;
+  left: 10;
+  background-color: #497F5E;
+  position: absolute;
+  z-index: 1000;
+  font-family:'Courier New', Courier, monospace;
+  cursor: pointer;
 }

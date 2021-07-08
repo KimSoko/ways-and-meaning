@@ -27,7 +27,6 @@ const About = () => {
           <div className="left-container">
             <h3>Hi, I'm Kim Soko Schaefer</h3>
             <div className="inner-text">
-
               <p>I created Ways + Meaning to collect and share wisdom about better living.</p>
               <p>I'm a strategy consultant, a software engineer, and am passionate about the science of enjoying life.</p>
               {/* <p>This project is my third child. My first two are human, small, and require my time and attention so unfortunately this baby doesn’t get much love these days. If things are a bit weird or broken, just let me know.</p> */}
@@ -44,7 +43,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    // </div>
   )
 };
 

@@ -86,6 +86,14 @@ const App = () => {
             menuDisplay={menuDisplay}
             pageDisplay="about" />
         </Route>
+        <Route exact path='/newsletter'>
+        <Page
+            handleMouseEnter={handleMouseEnter}
+            handleMouseLeave={handleMouseLeave}
+            handleMenuClick={handleMenuClick}
+            menuDisplay={menuDisplay}
+            pageDisplay="purpose" />
+        </Route>
         <Route path=''>
           <Page
             handleMouseEnter={handleMouseEnter}
