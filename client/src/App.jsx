@@ -10,7 +10,6 @@ const App = () => {
 
   const handleMouseEnter = (e) => {
     let item = e.target.className;
-    console.log(item);
     for (let i = 0; i < options.length; i++) {
       let currentOption = options[i];
       if (item.includes(currentOption)) {
@@ -25,7 +24,6 @@ const App = () => {
 
   const handleMenuClick = (e) => {
     let item = e.target.className;
-    console.log('clicked on ', item);
     for (let i = 0; i < options.length; i++) {
       let currentOption = options[i];
       if (item.includes(currentOption)) {

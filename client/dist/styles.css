@@ -415,7 +415,7 @@ input:focus {
 /*************** WMM ******************/
 
 .wmm-form-container {
-  width: 400px;
+  width: 600px;
   background-color: #497F5E;
   color: #E5E4FC;
   font-family: Helvetica,Arial,sans-serif;
@@ -435,9 +435,28 @@ input:focus {
   margin-block-start: 0;
 }
 
+.decide-button {
+  background-color: #497F5E;
+  color: #E5E4FC;
+  margin-left: 150px;
+  font-size: 24px;
+  padding: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+.with-button {
+  justify-content: left;
+}
+
 .wmm-topic-form {
   display: block;
   margin-top: 0;
+}
+
+.wmm-topic-container {
+  display: block;
+  width: 600px;
 }
 
 .radio-input {
@@ -456,4 +475,16 @@ input:focus {
   font-family:'Courier New', Courier, monospace;
   cursor: pointer;
   background-color: #497F5E;
+}
+
+.form-next {
+  background-color: #FFFCF1;
+  color: #497F5E;
+  float: right;
+  height: 20px;
+  width: 50px;
+  box-shadow: none;
+  border-radius: 0;
+  margin-top: 20px;
+  font-size: 24px;
 }
