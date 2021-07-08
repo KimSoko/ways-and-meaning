@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import DecideTopic from './DecideTopic.jsx';
 import DecideCriteria from './DecideCriteria.jsx';
+import DecideChoices from './DecideChoices.jsx';
 import image from '../../dist/media/choices-2.png';
 import helpers from '../helpers/wmm.js';
 
@@ -10,6 +11,14 @@ const DecideApp = () => {
   const [wmmDisplay, setWmmDisplay] = useState('start');
   const [topic, setTopic] = useState('');
   const [criteria, setCriteria] = useState(helpers.emptyCriteria);
+  const [list, setList] = useState([]);
+  const [options, setOptions] = useState([]);
+
+  useEffect(() => {
+    let copy = options.slice();
+    let popped = copy.pop();
+    setList(popped);
+  }, [options])
 
   const handleNext = () => {
     if (wmmDisplay === 'start') {
@@ -35,7 +44,32 @@ const DecideApp = () => {
       }
     }
     setCriteria(oldCriteria);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let newOptions = helpers.createOptions(criteria);
+    setOptions(newOptions);
+    setWmmDisplay('decide');
   };
+
+  const handleVote = (e) => {
+    let winner = e.target.name;
+    let oldCriteria = criteria.slice();
+    for (let i = 0; i < oldCriteria.length; i++) {
+      if (oldCriteria[i].name === winner) {
+        oldCriteria[i].score++;
+      }
+    }
+
+    setCriteria(oldCriteria);
+    let oldOptions = options.slice();
+    oldOptions.pop();
+    setOptions(oldOptions);
+    if (oldOptions.length === 0) {
+      setWmmDisplay('results');
+    }
+  }
 
   return (
     <div className="two-col-container">
@@ -70,14 +104,12 @@ const DecideApp = () => {
                   <li>For every combination of options, choose one thing that matters most</li>
                   <li>Review your results and use them to make smarter decisions</li>
                 </ol>
+                <button onClick={handleNext} className="form-next get-started">Get Started</button>
               </div>
-            </div>
-            <div className="right-container no-top-margin">
-              <button onClick={handleNext} className="decide-button">Get Started</button>
             </div>
           </div>
         )}
-          {wmmDisplay === 'topic' && (
+        {wmmDisplay === 'topic' && (
           <div className="left-container no-top-margin">
             <DecideTopic
               setTopic={setTopic}
@@ -86,14 +118,19 @@ const DecideApp = () => {
         )}
         {wmmDisplay === 'criteria' && (
           <div className="left-container no-top-margin">
-          <DecideCriteria
-            topic={topic}
-            handleCriteria={handleCriteria}
-            handleNext={handleNext} />
-        </div>
+            <DecideCriteria
+              topic={topic}
+              handleCriteria={handleCriteria}
+              handleSubmit={handleSubmit} />
+          </div>
         )}
         {wmmDisplay === 'decide' && (
-          <div></div>
+          <div>
+            <DecideChoices
+              list={list}
+              handleVote={handleVote}
+              handleNext={handleNext} />
+          </div>
         )}
         {wmmDisplay === 'results' && (
           <div></div>

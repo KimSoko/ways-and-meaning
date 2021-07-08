@@ -478,13 +478,39 @@ input:focus {
 }
 
 .form-next {
-  background-color: #FFFCF1;
+  background-color: #E5E4FC;
   color: #497F5E;
   float: right;
+  margin-top: -50px;
+}
+
+.get-started {
+  margin-top: 10px;
+  background-color: #497F5E;
+  color: #E5E4FC;
+  float: none;
+  margin-left: 200px;
+}
+
+.criteria-input {
+  border: none;
+  border-bottom: 2px;
+  border-bottom-style: solid;
+  border-bottom-color:#FFFCF1;
+  color: #FFFCF1;
+  font-size: 16px;
+  display: inline;
+  width: 400px;
+  padding: 5px;
+  background-color: #497F5E;
+  margin-left: 0;
   height: 20px;
-  width: 50px;
-  box-shadow: none;
-  border-radius: 0;
-  margin-top: 20px;
-  font-size: 24px;
+}
+
+.criteria-label {
+  font-size: 16px;
+  font-weight: bold;
+  vertical-align: bottom;
+  padding: 10px;
+  padding-right: 20px;
 }
