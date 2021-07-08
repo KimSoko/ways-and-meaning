@@ -514,3 +514,36 @@ input:focus {
   padding: 10px;
   padding-right: 20px;
 }
+
+.options-container {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-div {
+  float: left;
+}
+
+.right-div {
+  float: right;
+}
+
+.option-button {
+  height: 200px;
+  width: 200px;
+  margin: 0;
+  background-color: #497F5E;
+}
+
+.or {
+  color: #497F5E;
+  font-weight: bold;
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+.instructions {
+  width: 500px;
+  margin-top: 50px;
+}
