@@ -1,13 +1,9 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AppBar from '../nav/AppBar.jsx';
-import PurposeBar from '../nav/PurposeBar.jsx';
-import IdeasBar from '../nav/IdeasBar.jsx';
-import AboutBar from '../nav/AboutBar.jsx';
 import image from '../../dist/media/error-2.png'
 
-const Error = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay }) => {
+const Error = () => {
   return (
     <div className="two-col-container">
       <div className="outer-left-container" style={{
@@ -30,39 +26,7 @@ const Error = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDispla
         </div>
         </div>
       </div>
-      <div className="menu-container">
-        <nav className="main-menu">
-          <AppBar
-            handleMouseEnter={handleMouseEnter}
-            handleMouseLeave={handleMouseLeave}
-            handleMenuClick={handleMenuClick}
-            menuDisplay={menuDisplay}
-          />
-
-          <PurposeBar
-            handleMouseEnter={handleMouseEnter}
-            handleMouseLeave={handleMouseLeave}
-            handleMenuClick={handleMenuClick}
-            menuDisplay={menuDisplay}
-          />
-
-          <IdeasBar
-            handleMouseEnter={handleMouseEnter}
-            handleMouseLeave={handleMouseLeave}
-            handleMenuClick={handleMenuClick}
-            menuDisplay={menuDisplay}
-          />
-
-          <AboutBar
-            handleMouseEnter={handleMouseEnter}
-            handleMouseLeave={handleMouseLeave}
-            handleMenuClick={handleMenuClick}
-            menuDisplay={menuDisplay}
-          />
-        </nav>
-      </div>
     </div>
-
   )
 };
 

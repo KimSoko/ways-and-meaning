@@ -5,7 +5,7 @@ import PurposeBar from '../nav/PurposeBar.jsx';
 import IdeasBar from '../nav/IdeasBar.jsx';
 import AboutBar from '../nav/AboutBar.jsx';
 import Start from './Start.jsx';
-import Decide from './Decide.jsx';
+import DecideApp from '../wmm/DecideApp.jsx';
 import Purpose from './Purpose.jsx';
 import Ideas from './Ideas.jsx';
 import About from './About.jsx';
@@ -27,7 +27,7 @@ const Page = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay
         handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay} />
         {pageDisplay === 'app' && (
-          <Decide />
+          <DecideApp />
         )}
       <PurposeBar
         handleMouseEnter={handleMouseEnter}

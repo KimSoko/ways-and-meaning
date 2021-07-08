@@ -1,13 +1,6 @@
 
 import React, { useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
-// import Start from './pages/Start.jsx';
-// import Decide from './pages/Decide.jsx';
-// import Purpose from './pages/Purpose.jsx';
-// import Ideas from './pages/Ideas.jsx';
-// import Confidence from './ideas/Confidence.jsx';
-// import About from './pages/About.jsx';
-import Error from './pages/Error.jsx';
 import Page from './pages/Page.jsx';
 
 const App = () => {

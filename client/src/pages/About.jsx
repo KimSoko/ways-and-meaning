@@ -1,40 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import AppBar from '../nav/AppBar.jsx';
-// import ToolkitBar from '../nav/ToolkitBar.jsx';
-// import IdeasBar from '../nav/IdeasBar.jsx';
-// import AboutBar from '../nav/AboutBar.jsx';
 import image from '../../dist/media/about.png';
 
-const About = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay }) => {
+const About = () => {
   return (
-    <div className="page-container">
-      {/* <AppBar
-        handleMouseEnter={handleMouseEnter}
-        handleMouseLeave={handleMouseLeave}
-        handleMenuClick={handleMenuClick}
-        menuDisplay={menuDisplay}
-      />
-      <ToolkitBar
-        handleMouseEnter={handleMouseEnter}
-        handleMouseLeave={handleMouseLeave}
-        handleMenuClick={handleMenuClick}
-        menuDisplay={menuDisplay}
-      />
-      <IdeasBar
-        handleMouseEnter={handleMouseEnter}
-        handleMouseLeave={handleMouseLeave}
-        handleMenuClick={handleMenuClick}
-        menuDisplay={menuDisplay}
-      />
-      <AboutBar
-        handleMouseEnter={handleMouseEnter}
-        handleMouseLeave={handleMouseLeave}
-        handleMenuClick={handleMenuClick}
-        menuDisplay={menuDisplay}
-      /> */}
       <div className="two-col-container">
         <div className="outer-left-container" style={{
           backgroundImage: 'url(' + image + ')',
@@ -74,7 +44,7 @@ const About = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDispla
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   )
 };
 
