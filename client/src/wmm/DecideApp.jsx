@@ -8,7 +8,7 @@ import image from '../../dist/media/choices-2.png';
 import helpers from '../helpers/wmm.js';
 
 const DecideApp = () => {
-  const [wmmDisplay, setWmmDisplay] = useState('start');
+  const [wmmDisplay, setWmmDisplay] = useState('topic');
   const [topic, setTopic] = useState('');
   const [criteria, setCriteria] = useState(helpers.emptyCriteria);
   const [list, setList] = useState([]);
@@ -21,16 +21,14 @@ const DecideApp = () => {
   }, [options])
 
   const handleNext = () => {
-    if (wmmDisplay === 'start') {
-      setWmmDisplay('topic');
-    } else if (wmmDisplay === 'topic') {
+    if (wmmDisplay === 'topic') {
       setWmmDisplay('criteria');
     } else if (wmmDisplay === 'criteria') {
       setWmmDisplay('decide');
     } else if (wmmDisplay === 'decide') {
       setWmmDisplay('results');
     } else if (wmmDisplay === 'results') {
-      setWmmDisplay('start');
+      setWmmDisplay('topic');
     }
   }
 
@@ -92,23 +90,6 @@ const DecideApp = () => {
           </div>
           <h3>A decision making app</h3>
         </div>
-        {wmmDisplay === 'start' && (
-          <div className="two-col-container no-top-margin with-button">
-            <div className="left-container no-top-margin">
-              <div className="inner-text no-top-margin">
-                <p>Making major life decisions is hard. This app should help make it a bit easier by helping you to prioritize what matters most.</p>
-                <p>To get started...</p>
-                <ol>
-                  <li>Select a topic</li>
-                  <li>Enter 3-7 criteria you’re considering when making the decision</li>
-                  <li>For every combination of options, choose one thing that matters most</li>
-                  <li>Review your results and use them to make smarter decisions</li>
-                </ol>
-                <button onClick={handleNext} className="form-next get-started">Get Started</button>
-              </div>
-            </div>
-          </div>
-        )}
         {wmmDisplay === 'topic' && (
           <div className="left-container no-top-margin">
             <DecideTopic
