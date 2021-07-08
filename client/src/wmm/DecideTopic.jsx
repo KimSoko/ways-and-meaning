@@ -1,53 +1,37 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 
-const DecideTopic = () => {
-  const [showOptions, setShowOptions] = useState(false);
-  const [currentSort, setCurrentSort] = useState('1. Select a topic');
+const DecideTopic = ({ handleNext }) => {
   const [topic, setTopic] = useState('');
-
-  const handleHover = () => {
-    setShowOptions(true);
-  };
-
-  const handleLeave = () => {
-    setShowOptions(false);
-  };
 
   const handleTopic = (e) => {
     const option = e.target.innerHTML;
     setTopic(option);
-    setShowOptions(false);
+    handleNext();
   }
 
   return (
-    <div className="wmm-topic-container">
-      <div className="wmm-dropdown-container">
-        {!showOptions && (
-          <div className="dropdown-hidden" onMouseOver={handleHover} onFocus={handleHover}>
-            <div className="dropdown-caret">
-              {currentSort}
-              <i className="fa fa-caret-down" id="sortCaret" />
-            </div>
-          </div>
-        )}
-        {showOptions && (
-          <div className="dropdown-visible">
-            <div className="dropdown-caret">
-              {currentSort}
-              <i className="fa fa-caret-down" id="sortCaret" />
-            </div>
-            <div className="dropdown-content" onMouseOver={handleHover} onMouseLeave={handleLeave} onFocus={handleLeave}>
-              <div className="dropdown-label" role="navigation" onClick={handleTopic} onKeyDown={handleTopic}>Choose a new job</div>
-              <div className="dropdown-label" role="navigation" onClick={handleTopic} onKeyDown={handleTopic}>Pick a new career</div>
-              <div className="dropdown-label" role="navigation" onClick={handleTopic} onKeyDown={handleTopic}>Decide where to live</div>
-              <div className="dropdown-label" role="navigation" onClick={handleTopic} onKeyDown={handleTopic}>Decide which home to buy</div>
-              <div className="dropdown-label" role="navigation" onClick={handleTopic} onKeyDown={handleTopic}>Determine whom to spend your life with</div>
-              <div className="dropdown-label" role="navigation" onClick={handleTopic} onKeyDown={handleTopic}>Clarify what matters most in life</div>
-              <div className="dropdown-label" role="navigation" onClick={handleTopic} onKeyDown={handleTopic}>Other</div>
-            </div>
-          </div>
-        )}
-      </div>
+    <div className="wmm-form-container">
+      <form className="wmm-topic-form">
+        <h4 className="wmm-form-title">1. What decision do you need help with today?</h4>
+        <div className="wmm-topic-choices">
+          <input className="radio-input" type="radio" onClick={handleTopic} id="job" name="topic" />
+          <label className="form-content" htmlFor="job">Choose a new job</label><br/>
+          <input className="radio-input" type="radio" onClick={handleTopic} id="career" name="topic"/>
+          <label className="form-content" htmlFor="career">Pick a new career</label><br/>
+          <input className="radio-input" type="radio" onClick={handleTopic} id="live" name="topic"/>
+          <label className="form-content" htmlFor="live">Decide where to live</label><br/>
+          <input className="radio-input" type="radio" onClick={handleTopic} id="home" name="topic" />
+          <label className="form-content" htmlFor="home">Decide which home to pick</label><br/>
+          <input className="radio-input" type="radio" onClick={handleTopic} id="relationships" name="topic"/>
+          <label className="form-content" htmlFor="relationships">Choose a partner</label><br/>
+          <input className="radio-input" type="radio" onClick={handleTopic} id="wmm" name="topic" />
+          <label className="form-content" htmlFor="wmm">Clarify what matters most in life</label><br/>
+          <input className="radio-input" type="radio" onClick={handleTopic} id="other" name="topic" />
+          <label className="form-content" htmlFor="other">Other</label><br/>
+        </div>
+      </form>
     </div>
   );
 };
