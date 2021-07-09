@@ -1,9 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import DecideTopic from './DecideTopic.jsx';
 import DecideCriteria from './DecideCriteria.jsx';
 import DecideChoices from './DecideChoices.jsx';
+import DecideResults from './DecideResults.jsx';
 import image from '../../dist/media/choices-2.png';
 import helpers from '../helpers/wmm.js';
 
@@ -69,6 +71,19 @@ const DecideApp = () => {
     }
   }
 
+  const handlePost = (e) => {
+    let data = helpers.formatForDB(criteria);
+    data.topic = topic;
+    axios.post('/data', data)
+      .then((response) => {
+        console.log('POST to db successful ', response);
+        handleNext();
+      })
+      .catch((err) => {
+        throw err;
+      })
+  }
+
   return (
     <div className="two-col-container">
       <div className="outer-left-container" style={{
@@ -106,15 +121,17 @@ const DecideApp = () => {
           </div>
         )}
         {wmmDisplay === 'decide' && (
-          <div>
-            <DecideChoices
-              list={list}
-              handleVote={handleVote}
-              handleNext={handleNext} />
-          </div>
+          <DecideChoices
+            list={list}
+            handleVote={handleVote}
+            handleNext={handleNext} />
         )}
         {wmmDisplay === 'results' && (
-          <div></div>
+          <DecideResults
+            criteria={criteria}
+            topic={topic}
+            handlePost={handlePost}
+          />
         )}
       </div>
     </div>

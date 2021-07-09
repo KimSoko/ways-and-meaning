@@ -25,8 +25,9 @@ const Error = () => {
           </div>
         </div>
         <div className="left-container">
-          <h3>I messed up and sent you nowhere. Maybe you were trying to...</h3>
-          <div className="with-img">
+          <h3>I messed up and sent you nowhere.</h3>
+          <div className="top-margin">
+            <p>Maybe you were trying to...</p>
             <ul>
               <Link to='/ideas'><li>Read an article?</li></Link>
               <Link to='/purpose'><li>Sign up for my free purpose toolkit?</li></Link>
