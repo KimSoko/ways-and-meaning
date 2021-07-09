@@ -40,7 +40,7 @@ const Purpose = () => {
 
         <h3>A gift for you</h3>
         <div className="two-col-container">
-          <div className="left-container-nested top-margin">
+          <div className="left-container-nested bottom-container top-margin scroll">
             <p>Let’s kick off this relationship with a gift. The purpose toolkit includes:
             </p>
             <ul>

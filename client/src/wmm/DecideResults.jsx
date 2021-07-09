@@ -7,7 +7,7 @@ const DecideResults = ({ handlePost, criteria, topic }) => {
   const sorted = criteria.slice().filter(obj => obj.value !== '').sort((a, b) => b.score - a.score);
 
   return (
-    <div className="two-col-container">
+    <div className="two-col-container bottom-container scroll">
       <div className="left-container no-top-margin">
         <div className="table-container">
           <table>
@@ -18,14 +18,14 @@ const DecideResults = ({ handlePost, criteria, topic }) => {
                 <th className="table-header short" id="header-score">SCORE</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="top-border bottom-border">
               {sorted.map((item) => {
                 if (sorted.indexOf(item) === 0) {
                   return (
                     <tr key={`${item.name}-${item.score}`}>
-                      <td className="table-first-row" id="row-score">1</td>
+                      <td className="table-first-row left-border" id="row-score">1</td>
                       <td className="table-first-row" id="row-name">{item.value}</td>
-                      <td className="table-first-row" id="row-score">{item.score}</td>
+                      <td className="table-first-row right-border" id="row-score">{item.score}</td>
                     </tr>
                   )
                 } else {
@@ -33,7 +33,7 @@ const DecideResults = ({ handlePost, criteria, topic }) => {
                     <tr key={`${item.name}-${item.score}`}>
                       <td className="table-row" id="row-score">{sorted.indexOf(item) + 1}</td>
                       <td className="table-row" id="row-name">{item.value}</td>
-                      <td className="table-row" id="row-score">{item.score}</td>
+                      <td className="table-row right-border" id="row-score">{item.score}</td>
                     </tr>
                   )
                 }

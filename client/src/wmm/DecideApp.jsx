@@ -106,14 +106,14 @@ const DecideApp = () => {
           <h3>A decision making app</h3>
         </div>
         {wmmDisplay === 'topic' && (
-          <div className="left-container no-top-margin">
+          <div className="left-container bottom-container no-top-margin scroll">
             <DecideTopic
               setTopic={setTopic}
               handleNext={handleNext} />
           </div>
         )}
         {wmmDisplay === 'criteria' && (
-          <div className="left-container no-top-margin">
+          <div className="left-container bottom-container no-top-margin scroll">
             <DecideCriteria
               topic={topic}
               handleCriteria={handleCriteria}

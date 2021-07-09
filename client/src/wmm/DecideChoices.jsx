@@ -5,7 +5,7 @@ import React from 'react';
 const DecideChoices = ({ list, handleVote }) => {
 
   return (
-    <div className="left-container no-top-margin">
+    <div className="left-container no-top-margin bottom-container scroll">
       {list && (
         <div className="options-container">
           {list[0].display === 'A' && (
