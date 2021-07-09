@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import image from '../../dist/media/Purpose_Framework.png';
+import image from '../../dist/media/purpose.png';
+import image2 from '../../dist/media/grid.png';
 
 const Purpose = () => {
   const [email, setEmail] = useState('');
@@ -26,6 +27,12 @@ const Purpose = () => {
 
   return (
     <div className="two-col-container">
+      <div className="outer-left-container" style={{
+          backgroundImage: 'url(' + image2 + ')',
+          backgroundSize: 'cover',
+          backgroundPosition: '100%',
+          backgroundRepeat: 'no-repeat'
+        }}>
       <div className="left-container">
         <div className="two-col-container">
           <div className="left-container-nested">
@@ -40,7 +47,7 @@ const Purpose = () => {
 
         <h3>A gift for you</h3>
         <div className="two-col-container">
-          <div className="left-container-nested bottom-container top-margin scroll">
+          <div className="left-container-nested inner-text bottom-container scroll">
             <p>Let’s kick off this relationship with a gift. The purpose toolkit includes:
             </p>
             <ul>
@@ -61,6 +68,7 @@ const Purpose = () => {
             <img className="right-image" src={image} alt="Purpose Framework" />
           </div>
         </div>
+      </div>
       </div>
     </div>
   )

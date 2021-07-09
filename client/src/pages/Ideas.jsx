@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Card from './Card.jsx';
 import image1 from '../../dist/media/confidence.jpg';
-import image2 from '../../dist/media/Purpose_Framework_2.png';
+import image2 from '../../dist/media/Purpose-with-background.png';
 import image3 from '../../dist/media/lifestyle_business_model.jpg';
 import image4 from '../../dist/media/roadmap.jpg';
 import image5 from '../../dist/media/vintage_computer_lab.jpg';

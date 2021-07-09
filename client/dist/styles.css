@@ -216,7 +216,6 @@ table {
 }
 
 .left-container-nested {
-  flex: 1;
   margin-right: 80px;
 }
 
@@ -231,7 +230,8 @@ table {
 }
 
 .right-image {
-  width: 30rem;
+  width: 25rem;
+  box-shadow: 2px 2px 5px rgb(95, 77, 99);
 }
 
 .text-container {
@@ -262,7 +262,7 @@ table {
 }
 
 .bottom-container {
-  height: 400px;
+  height: 450px;
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
