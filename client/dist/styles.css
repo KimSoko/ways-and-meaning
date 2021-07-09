@@ -187,7 +187,8 @@ button {
 .two-col-container {
   display: flex;
   width: 100%;
-  justify-content:space-between;
+  justify-content:flex-start;
+  flex-wrap: wrap;
 }
 
 .outer-left-container {
@@ -409,7 +410,7 @@ input:focus {
 /*************** WMM ******************/
 
 .wmm-form-container {
-  width: 600px;
+  /* width: 600px; */
   background-color: #497F5E;
   color: #E5E4FC;
   font-family: Helvetica,Arial,sans-serif;
@@ -476,6 +477,7 @@ input:focus {
   color: #497F5E;
   float: right;
   margin-top: -50px;
+  margin-right: 100px;
 }
 
 .get-started {
@@ -486,6 +488,16 @@ input:focus {
   margin-left: 200px;
 }
 
+.criteria {
+  width: 750px;
+}
+
+#criteria-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .criteria-input {
   border: none;
   border-bottom: 2px;
@@ -494,19 +506,28 @@ input:focus {
   color: #FFFCF1;
   font-size: 16px;
   display: inline;
-  width: 400px;
+  width: 250px;
   padding: 5px;
   background-color: #497F5E;
-  margin-left: 0;
+  margin: 0 50px 20px 10px;
   height: 20px;
 }
 
 .criteria-label {
   font-size: 16px;
   font-weight: bold;
-  vertical-align: bottom;
-  padding: 10px;
-  padding-right: 20px;
+  vertical-align: text-bottom;
+  margin-right: 5px;
+}
+
+.other-input {
+  background-color: #497F5E;
+  height: 10px;
+  border: none;
+  border-bottom: 1px #FFFCF1 solid;
+  padding: 0;
+  margin: 0;
+  color: #FFFCF1;
 }
 
 .options-container {
@@ -544,16 +565,19 @@ input:focus {
 
 .table-container {
   width: 600px;
+  padding: 20px;
+  background-color: rgba(255, 252, 241, .7);
+  box-shadow: 2px 2px 5px rgb(95, 77, 99);
 }
 
 .table-header {
   width: 100%;
   font-family: Helvetica,Arial,sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   letter-spacing: 4px;
   font-weight: normal;
-  border-bottom: 3px #2B2F33 solid;
   text-align: left;
+  padding: 0 10px 10px 0;
 }
 
 .short {
@@ -561,7 +585,10 @@ input:focus {
 }
 
 .table-row {
-
+  border-bottom: 2px #2B2F33 solid;
+  padding: 10px;
+  font-family:'Courier New', Courier, monospace;
+  color: #2B2F33;
 }
 
 .table-first-row {
@@ -572,4 +599,23 @@ input:focus {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px;
+  font-family:Helvetica,Arial,sans-serif;
+}
+
+.help-message-container {
+  background-color: #E5E4FC;
+  padding: 30px;
+  box-shadow: 2px 2px 5px rgb(95, 77, 99);
+  width: 400px;
+}
+
+.help-message{
+  margin-bottom: 20px;
+  letter-spacing: normal;
+  color: #497F5E;
+}
+
+.help-button {
+  background-color: #497F5E;
+  color: #E5E4FC;
 }

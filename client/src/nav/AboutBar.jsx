@@ -3,9 +3,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AboutBar = ({ menuDisplay, handleDisplay, handleMouseEnter, handleMouseLeave }) => {
+const AboutBar = ({ menuDisplay, handleMouseEnter, handleMouseLeave, handleMenuClick }) => {
   return (
-    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleDisplay} className="nav-bar about-bar">
+
+    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleMenuClick} className="nav-bar about-bar">
       <h4>ABOUT</h4>
       {menuDisplay === 'about' && (
         <div className="nav-bar-expanded">
@@ -23,6 +24,7 @@ const AboutBar = ({ menuDisplay, handleDisplay, handleMouseEnter, handleMouseLea
         </div>
       )}
     </div>
+
   )
 };
 

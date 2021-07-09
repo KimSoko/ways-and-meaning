@@ -1,12 +1,23 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useState } from 'react';
 
 const DecideTopic = ({ handleNext, setTopic }) => {
+  const [other, setOther] = useState('')
    const handleTopic = (e) => {
     const option = e.target.id;
-    console.log(option);
-    setTopic(option);
+    if (option === 'other') {
+      setTopic(other);
+    } else {
+      setTopic(option);
+    }
+  }
+
+  const handleOther = (e) => {
+    e.preventDefault();
+    const otherTopic = e.target.value;
+    setOther(otherTopic);
+    setTopic(otherTopic);
   }
 
   return (
@@ -28,7 +39,9 @@ const DecideTopic = ({ handleNext, setTopic }) => {
             <input className="radio-input" type="radio" onClick={handleTopic} id="wmm" name="topic" />
             <label className="form-content" htmlFor="wmm">Clarify what matters most in life</label><br />
             <input className="radio-input" type="radio" onClick={handleTopic} id="other" name="topic" />
-            <label className="form-content" htmlFor="other">Other</label><br />
+            <label className="form-content" htmlFor="other">Other</label>
+            <input className="other-input" type="text" onChange={handleOther} id="other-input" name="topic-other" />
+            <br />
           </div>
         </form>
       </div>
