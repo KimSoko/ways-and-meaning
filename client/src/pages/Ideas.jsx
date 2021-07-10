@@ -13,8 +13,8 @@ import image6 from '../../dist/media/mindful_woman.jpg';
 const Ideas = () => {
   return (
     <div className="two-col-container">
-      <div className="left-container">
-        <div className="two-col-container">
+      <div className="left-container top-container">
+        <div className="two-col-container no-wrap">
           <div className="left-container-nested">
             <h1>Ideas</h1>
           </div>

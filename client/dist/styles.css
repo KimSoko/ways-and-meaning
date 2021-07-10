@@ -203,11 +203,11 @@ table {
 }
 
 .left-container {
-  margin: 80px 0 80px 80px;
+  margin: 5rem;
 }
 
 .inner-text {
-  width: 600px;
+  width: 800px;
   margin-top: 70px;
   background-color: rgba(255, 252, 241, .7);
   padding: 20px;
@@ -216,21 +216,21 @@ table {
 }
 
 .left-container-nested {
-  margin-right: 80px;
+  margin-right: 5rem;
 }
 
 .top-margin {
-  margin-top: 80px;
+  margin-top: 5rem;
 }
 
 
 .right-container {
   flex: 0;
-  margin: 80px;
+  margin: 5rem 20px 0 0;
 }
 
 .right-image {
-  width: 25rem;
+  width: 20rem;
   box-shadow: 2px 2px 5px rgb(95, 77, 99);
 }
 
@@ -243,7 +243,7 @@ table {
 }
 
 .home-button {
-  margin-right: 80px;
+  margin-right: 5rem;
   margin-top: 0;
   height: 60px;
   width: 60px;
@@ -271,21 +271,30 @@ table {
   overflow-y: scroll;
 }
 
+.top-container {
+  margin-right: 0;
+  justify-content: space-between;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
 /************** CARDS **********************/
 .articles-div {
   border-top: 5px #2B2F33 solid;
   display: flex;
   margin-top: 30px;
-  padding: 50px 50px 50px 0;
+  padding-top: 50px;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
 }
 
 .articles-box {
-  width: 20rem;
-  height: 20rem;
-  margin-bottom: 50px;
+  width: 17rem;
+  height: 17rem;
+  margin: 0 5rem 5rem 0;
   transform-style: preserve-3d;
   box-sizing: border-box;
 }

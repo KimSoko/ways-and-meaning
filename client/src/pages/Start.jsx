@@ -10,7 +10,7 @@ const Start = () => {
         backgroundPosition: '100%',
         backgroundRepeat: 'no-repeat'
       }}>
-        <div className="left-container">
+        <div className="left-container top-container no-wrap">
           <h1>Ways + Meaning</h1>
           <h3>Tools for living better</h3>
         </div>

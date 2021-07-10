@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import image from '../../dist/media/purpose.png';
+import image from '../../dist/media/purpose-red.png';
 import image2 from '../../dist/media/grid.png';
 
 const Purpose = () => {
@@ -29,12 +29,12 @@ const Purpose = () => {
     <div className="two-col-container">
       <div className="outer-left-container" style={{
           backgroundImage: 'url(' + image2 + ')',
-          backgroundSize: 'cover',
+          backgroundSize: '50%',
           backgroundPosition: '100%',
-          backgroundRepeat: 'no-repeat'
+          backgroundRepeat: 'repeat'
         }}>
-      <div className="left-container">
-        <div className="two-col-container">
+      <div className="left-container top-container">
+        <div className="two-col-container no-wrap">
           <div className="left-container-nested">
             <h1>Purpose Toolkit</h1>
           </div>
