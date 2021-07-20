@@ -11,18 +11,23 @@ import Ideas from './Ideas.jsx';
 import Fear from '../ideas/Fear.jsx';
 import About from './About.jsx';
 import Error from './Error.jsx';
+import image from '../../dist/media/background.png';
 
 const Page = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay, pageDisplay }) => {
 
   return (
-    <div className="page-container">
+    <div className="app-container">
       {pageDisplay === 'start' && (
-        <div className="inner-page-container">
+        <div className="page-container" style={{
+          backgroundImage: 'url(' + image + ')',
+          backgroundSize: 'cover',
+          backgroundPosition: '100%',
+          backgroundRepeat: 'no-repeat' }}>
           <Start />
         </div>
       )}
       {pageDisplay === 'error' && (
-        <div className="inner-page-container">
+        <div className="page-container">
           <Error />
         </div>
       )}
@@ -32,7 +37,7 @@ const Page = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay
         handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay} />
       {pageDisplay === 'app' && (
-        <div className="inner-page-container">
+        <div className="page-container">
           <DecideApp />
         </div>
       )}
@@ -42,7 +47,7 @@ const Page = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay
         handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay} />
       {pageDisplay === 'purpose' && (
-        <div className="inner-page-container">
+        <div className="page-container">
           <Purpose />
         </div>
       )}
@@ -52,12 +57,12 @@ const Page = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay
         handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay} />
       {pageDisplay === 'ideas' && (
-        <div className="inner-page-container">
+        <div className="page-container">
           <Ideas />
         </div>
       )}
       {pageDisplay === 'fear' && (
-        <div className="inner-page-container">
+        <div className="page-container">
           <Fear />
         </div>
       )}
@@ -67,7 +72,7 @@ const Page = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay
         handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay} />
       {pageDisplay === 'about' && (
-        <div className="inner-page-container">
+        <div className="page-container">
           <About />
         </div>
       )}
