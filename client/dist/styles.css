@@ -56,6 +56,12 @@ p {
   margin-block-end: 30px;
 }
 
+p.quote {
+  color:#E15400;
+  font-style: italic;
+  margin-left: 100px;
+}
+
 a {
   text-decoration: none;
   flex: 0;
@@ -101,20 +107,23 @@ table {
 }
 
 .nav-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   padding-top: 30px;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   vertical-align: top;
   box-shadow: 2px 2px 5px rgb(95, 77, 99);
-  flex: 0;
+  flex-grow: .00001;
   height: 100%;
+  align-self: flex-start;
 }
 
 .nav-bar:hover h4 {
-  transition-property: flex, writing-mode, font-size, width;
-  transition-duration: 1s;
   padding: 150px 20px 20px 20px;
-  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
   writing-mode: horizontal-tb;
   width: 300px;
   font-size: 30px;
@@ -123,9 +132,12 @@ table {
   font-weight: bold;
   display: inline;
   margin-block-end: 0px;
+  transition-property: flex-grow, flex-shrink, writing-mode, font-size, width;
+  transition-duration: 1s;
 }
 
 .nav-bar-expanded {
+  position: relative;
   display: inline;
   writing-mode: horizontal-tb;
   width: 300px;
@@ -178,7 +190,9 @@ table {
 /******************* PAGES ******************/
 
 .app-container {
+  flex-basis: auto;
   display: flex;
+  width: 100%;
 }
 
 .page-container {
@@ -226,17 +240,9 @@ table {
   padding: 20px;
 }
 
-.top-margin {
-  margin-top: 5rem;
-}
-
 .right-image {
   width: 20rem;
   box-shadow: 2px 2px 5px rgb(95, 77, 99);
-}
-
-.text-container {
-  width: 70%;
 }
 
 .home-button {
@@ -247,22 +253,8 @@ table {
   font-size: 13px;
 }
 
-.background-img {
-  z-index: -1;
-  opacity: 0.4;
-  object-fit: fill;
-}
-
-.scroll {
-  overflow-y: scroll;
-}
-
-.no-wrap {
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-
 /************** CARDS **********************/
+
 .articles-div {
   display: flex;
   flex-wrap: wrap;
@@ -276,18 +268,15 @@ table {
   margin: 0 3rem 3rem 0;
   transform-style: preserve-3d;
   box-sizing: border-box;
+  transition: transform ease 500ms;
 }
 
 .articles-box .flipped .front{
-  transform: rotateY(180deg);
-  transition: -webkit-transform ease 500ms;
-    transition: transform ease 500ms;
+
 }
 
 .articles-box:hover .flipped .back{
-  transform: rotateY(0deg);
-  transition: all ease 500ms;
-    transition: all ease 500ms;
+  transform: rotateY(180deg);
 }
 
 .front,
@@ -304,7 +293,6 @@ table {
 
 .front {
     z-index: 2;
-    transform: rotateY(0deg);
     position: relative;
 }
 
