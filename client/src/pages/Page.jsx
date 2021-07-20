@@ -11,25 +11,17 @@ import Ideas from './Ideas.jsx';
 import Fear from '../ideas/Fear.jsx';
 import About from './About.jsx';
 import Error from './Error.jsx';
-import image from '../../dist/media/background.png';
+
 
 const Page = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay, pageDisplay }) => {
 
   return (
     <div className="app-container">
       {pageDisplay === 'start' && (
-        <div className="page-container" style={{
-          backgroundImage: 'url(' + image + ')',
-          backgroundSize: 'cover',
-          backgroundPosition: '100%',
-          backgroundRepeat: 'no-repeat' }}>
           <Start />
-        </div>
       )}
       {pageDisplay === 'error' && (
-        <div className="page-container">
-          <Error />
-        </div>
+        <Error />
       )}
       <AppBar
         handleMouseEnter={handleMouseEnter}
