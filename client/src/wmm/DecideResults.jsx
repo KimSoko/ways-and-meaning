@@ -7,8 +7,8 @@ const DecideResults = ({ handlePost, criteria, topic }) => {
   const sorted = criteria.slice().filter(obj => obj.value !== '').sort((a, b) => b.score - a.score);
 
   return (
-    <div className="two-col-container bottom-container scroll">
-      <div className="left-container no-top-margin">
+    <>
+      <div className="left-container">
         <div className="table-container">
           <table>
             <thead>
@@ -42,8 +42,8 @@ const DecideResults = ({ handlePost, criteria, topic }) => {
           </table>
         </div>
       </div>
-      <div className="right-container no-top-margin">
-        <div className="inner-text no-top-margin help-message-container">
+      <div className="right-container">
+        <div className="inner-text help-message-container">
           <h2 className="help-message">Wanna help more people?</h2>
           <p>I want to help everybody make better decisions in life,
             But in order to do that, I need your help.
@@ -51,7 +51,7 @@ const DecideResults = ({ handlePost, criteria, topic }) => {
         </div>
         <button className="form-next help-button" onClick={handlePost}>I wanna help</button>
       </div>
-    </div>
+    </>
   );
 };
 

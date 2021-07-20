@@ -25,14 +25,16 @@ const Error = () => {
       <div className="body">
         <div className="left-container">
           <h3>I messed up and sent you nowhere.</h3>
-          <p>Maybe you were trying to...</p>
-          <ul>
-            <Link to='/ideas'><li>Read an article?</li></Link>
-            <Link to='/purpose'><li>Sign up for my free purpose toolkit?</li></Link>
-            <Link to='/app'><li>Get help with a major life decision?</li></Link>
-            <Link to='/about'><li>Learn more about me?</li></Link>
-            <li>Anything else? <a href="mailto:kim.s.schaefer@gmail.com" target="_blank" rel="noreferrer">Email me</a> and let me know what you need</li>
-          </ul>
+          <div className="inner-text">
+            <p>Maybe you were trying to...</p>
+            <ul>
+              <Link to='/ideas'><li>Read an article?</li></Link>
+              <Link to='/purpose'><li>Sign up for my free purpose toolkit?</li></Link>
+              <Link to='/app'><li>Get help with a major life decision?</li></Link>
+              <Link to='/about'><li>Learn more about me?</li></Link>
+              <li>Anything else? <a href="mailto:kim.s.schaefer@gmail.com" target="_blank" rel="noreferrer">Email me</a> and let me know what you need</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

@@ -30,11 +30,14 @@ h2 {
 
 /* START PAGE SUB-TITLE */
 h3 {
-  padding-top: 10px;
-  padding-bottom: 3rem;
+  padding: 1rem 1rem 1rem 0;
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   color: #2B2F33;
+  background-color: rgba(255, 252, 241, .7);
+  width: fit-content;
+  margin-block-start: 0;
+  margin-block-end: 1rem;
 }
 
 /* NAV BAR TITLES */
@@ -197,21 +200,28 @@ table {
   margin: 0 3rem 3rem 3rem;
   padding-bottom: 2rem;
   display: flex;
+  flex-wrap: wrap;
+}
+
+.sub-head {
+  margin: 0 3rem 0 3rem;
+  flex: 1;
 }
 
 .left-container {
   flex: 1;
   justify-content: right;
+  margin: 1rem 0 1rem 0;
 }
 
 .right-container {
   flex: 0;
   display: inline;
+  margin: 1rem 0 1rem 0;
 }
 
 .inner-text {
   width: 800px;
-  margin-top: 70px;
   background-color: rgba(255, 252, 241, .7);
   padding: 20px;
 }
@@ -435,7 +445,7 @@ input:focus {
 .decide-button {
   background-color: #497F5E;
   color: #E5E4FC;
-  margin-left: 150px;
+  margin-left: 170px;
   font-size: 24px;
   padding: 20px;
   width: 150px;

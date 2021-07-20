@@ -85,40 +85,36 @@ const DecideApp = () => {
   }
 
   return (
-    <div className="two-col-container">
-      <div className="outer-left-container" style={{
-        backgroundImage: 'url(' + image + ')',
-        backgroundSize: 'cover',
-        backgroundPosition: '100%',
-        backgroundRepeat: 'no-repeat'
-      }}>
-        <div className="left-container top-container">
-          <div className="two-col-container no-wrap">
-            <div className="left-container-nested">
-              <h1>What Matters Most</h1>
-            </div>
-            <div className="inline">
-              <Link to="/">
-                <button className="home-button">home</button>
-              </Link>
-            </div>
-          </div>
-          <h3>A decision making app</h3>
+    <div className="page-container" style={{
+      backgroundImage: 'url(' + image + ')',
+      backgroundSize: 'cover',
+      backgroundPosition: '100%',
+      backgroundRepeat: 'no-repeat'
+    }}>
+      <div className="header">
+        <div className="left-container">
+          <h1>What Matters Most</h1>
         </div>
+        <div className="right-container">
+          <Link to="/">
+            <button className="home-button">home</button>
+          </Link>
+        </div>
+      </div>
+      <div className="sub-head">
+        <h3>A decision making app</h3>
+      </div>
+      <div className="body">
         {wmmDisplay === 'topic' && (
-          <div className="left-container bottom-container no-top-margin scroll">
-            <DecideTopic
-              setTopic={setTopic}
-              handleNext={handleNext} />
-          </div>
+          <DecideTopic
+            setTopic={setTopic}
+            handleNext={handleNext} />
         )}
         {wmmDisplay === 'criteria' && (
-          <div className="left-container bottom-container no-top-margin scroll">
-            <DecideCriteria
-              topic={topic}
-              handleCriteria={handleCriteria}
-              handleSubmit={handleSubmit} />
-          </div>
+          <DecideCriteria
+            topic={topic}
+            handleCriteria={handleCriteria}
+            handleSubmit={handleSubmit} />
         )}
         {wmmDisplay === 'decide' && (
           <DecideChoices
@@ -134,7 +130,7 @@ const DecideApp = () => {
           />
         )}
       </div>
-    </div>
+    </div >
   )
 };
 

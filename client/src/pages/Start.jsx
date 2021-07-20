@@ -12,10 +12,10 @@ const Start = () => {
       <div className="header"  >
         <h1>Ways + Meaning</h1>
       </div>
-      <div className="body">
-        <div className="left-container">
+      <div className="sub-head">
+
           <h3>Tools for living better</h3>
-        </div>
+
       </div>
     </div>
   )

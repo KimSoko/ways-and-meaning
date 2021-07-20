@@ -18,7 +18,7 @@ const Page = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay
   return (
     <div className="app-container">
       {pageDisplay === 'start' && (
-          <Start />
+        <Start />
       )}
       {pageDisplay === 'error' && (
         <Error />
@@ -29,9 +29,7 @@ const Page = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay
         handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay} />
       {pageDisplay === 'app' && (
-        <div className="page-container">
-          <DecideApp />
-        </div>
+        <DecideApp />
       )}
       <PurposeBar
         handleMouseEnter={handleMouseEnter}
