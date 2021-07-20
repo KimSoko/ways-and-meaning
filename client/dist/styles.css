@@ -253,11 +253,6 @@ table {
   object-fit: fill;
 }
 
-.no-top-margin {
-  margin-top: 0;
-  padding: 0;
-}
-
 .scroll {
   overflow-y: scroll;
 }
@@ -269,18 +264,16 @@ table {
 
 /************** CARDS **********************/
 .articles-div {
-  border-top: 5px #2B2F33 solid;
   display: flex;
-  margin-top: 30px;
-  padding-top: 50px;
   flex-wrap: wrap;
   justify-content: flex-start;
+  margin-top: 3rem;
 }
 
 .articles-box {
   width: 17rem;
   height: 17rem;
-  margin: 0 5rem 5rem 0;
+  margin: 0 3rem 3rem 0;
   transform-style: preserve-3d;
   box-sizing: border-box;
 }

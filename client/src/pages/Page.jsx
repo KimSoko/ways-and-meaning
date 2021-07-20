@@ -37,9 +37,7 @@ const Page = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay
         handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay} />
       {pageDisplay === 'purpose' && (
-        <div className="page-container">
-          <Purpose />
-        </div>
+        <Purpose />
       )}
       <IdeasBar
         handleMouseEnter={handleMouseEnter}
@@ -47,14 +45,10 @@ const Page = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay
         handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay} />
       {pageDisplay === 'ideas' && (
-        <div className="page-container">
-          <Ideas />
-        </div>
+        <Ideas />
       )}
       {pageDisplay === 'fear' && (
-        <div className="page-container">
-          <Fear />
-        </div>
+        <Fear />
       )}
       <AboutBar
         handleMouseEnter={handleMouseEnter}
@@ -62,9 +56,7 @@ const Page = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay
         handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay} />
       {pageDisplay === 'about' && (
-        <div className="page-container">
-          <About />
-        </div>
+        <About />
       )}
     </div>
   )

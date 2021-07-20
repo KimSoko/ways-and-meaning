@@ -12,18 +12,18 @@ import image6 from '../../dist/media/mindful_woman.jpg';
 
 const Ideas = () => {
   return (
-    <div className="two-col-container">
-      <div className="left-container top-container">
-        <div className="two-col-container no-wrap">
-          <div className="left-container-nested">
-            <h1>Ideas</h1>
-          </div>
-          <div className="inline">
-            <Link to="/">
-              <button className="home-button">home</button>
-            </Link>
-          </div>
+    <div className="page-container">
+      <div className="header">
+        <div className="left-container">
+          <h1>Ideas</h1>
         </div>
+        <div className="right-container">
+          <Link to="/">
+            <button className="home-button">home</button>
+          </Link>
+        </div>
+      </div>
+      <div className="body">
         <div className="articles-div">
           <Card
             title="On Fear and Confidence"

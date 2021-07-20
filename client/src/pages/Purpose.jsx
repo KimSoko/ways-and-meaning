@@ -26,51 +26,48 @@ const Purpose = () => {
   };
 
   return (
-    <div className="two-col-container">
-      <div className="outer-left-container" style={{
-          backgroundImage: 'url(' + image2 + ')',
-          backgroundSize: '70%',
-          backgroundPosition: '100%',
-          backgroundRepeat: 'repeat'
-        }}>
-      <div className="left-container top-container">
-        <div className="two-col-container no-wrap">
-          <div className="left-container-nested">
-            <h1>Purpose Toolkit</h1>
-          </div>
-          <div className="inline">
-            <Link to="/">
-              <button className="home-button">home</button>
-            </Link>
-          </div>
+    <div className="page-container" style={{
+      backgroundImage: 'url(' + image2 + ')',
+      backgroundSize: '70%',
+      backgroundPosition: '100%',
+      backgroundRepeat: 'repeat'
+    }}>
+      <div className="header">
+        <div className="left-container">
+          <h1>Purpose Toolkit</h1>
         </div>
-
+        <div className="right-container">
+          <Link to="/">
+            <button className="home-button">home</button>
+          </Link>
+        </div>
+      </div>
+      <div className="sub-head">
         <h3>A gift for you</h3>
-        <div className="two-col-container">
-          <div className="left-container-nested inner-text bottom-container scroll">
-            <p>Let’s kick off this relationship with a gift. The purpose toolkit includes:
-            </p>
-            <ul>
-              <li>The purpose framework minibook with printables of framework</li>
-              <li>The know yourself guide to help you fill out that framework</li>
-              <li>The Roadmap: a simple planning tool</li>
-              <li>A cool little to do list template</li>
-            </ul>
-            <p>BONUS: A basic budget tracker (because we all need it)</p>
-            <p>When you sign up you’ll be subscribed to my email list, ideas for living better. Bits of wisdom sent directly to your inbox, whenever inspiration strikes (which is only a couple of times a year right now).</p>
-            <p>This email is short and sweet but carries a punch. I promise not to annoy you all the time.</p>
-            <form id="email-form">
-              <input type="text" name="email" id="email-input" defaultValue="name@email.com" onClick={handleClick} onChange={handleChange}></input>
-              <button className="button-form" type="button" id="email-button" onClick={handleEmail}>Sign up</button>
-            </form>
-          </div>
-          <div className="right-container">
-            <img className="right-image" src={image} alt="Purpose Framework" />
-          </div>
+      </div>
+      <div className="body">
+        <div className="left-container inner-text">
+          <p>Let’s kick off this relationship with a gift. The purpose toolkit includes:
+          </p>
+          <ul>
+            <li>The purpose framework minibook with printables of framework</li>
+            <li>The know yourself guide to help you fill out that framework</li>
+            <li>The Roadmap: a simple planning tool</li>
+            <li>A cool little to do list template</li>
+          </ul>
+          <p>BONUS: A basic budget tracker (because we all need it)</p>
+          <p>When you sign up you’ll be subscribed to my email list, ideas for living better. Bits of wisdom sent directly to your inbox, whenever inspiration strikes (which is only a couple of times a year right now).</p>
+          <p>This email is short and sweet but carries a punch. I promise not to annoy you all the time.</p>
+          <form id="email-form">
+            <input type="text" name="email" id="email-input" defaultValue="name@email.com" onClick={handleClick} onChange={handleChange}></input>
+            <button className="button-form" type="button" id="email-button" onClick={handleEmail}>Sign up</button>
+          </form>
+        </div>
+        <div className="right-container">
+          <img className="right-image" src={image} alt="Purpose Framework" />
         </div>
       </div>
-      </div>
-    </div>
+    </div >
   )
 };
 
