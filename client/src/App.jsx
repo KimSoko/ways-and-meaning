@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 import React, { useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
@@ -28,7 +29,6 @@ const App = () => {
       let currentOption = options[i];
       if (item.includes(currentOption)) {
         setPageDisplay(currentOption);
-        setMenuDisplay('start');
       }
     }
   }
@@ -68,13 +68,13 @@ const App = () => {
             menuDisplay={menuDisplay}
             pageDisplay="ideas" />
         </Route>
-        <Route exact path='/ideas/confidence'>
+        <Route exact path='/ideas/fear-and-confidence'>
         <Page
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
             handleMenuClick={handleMenuClick}
             menuDisplay={menuDisplay}
-            pageDisplay={pageDisplay} />
+            pageDisplay="fear" />
         </Route>
         <Route exact path='/about'>
         <Page

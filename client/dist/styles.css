@@ -23,9 +23,9 @@ h1 {
 h2 {
   font-family: Helvetica,Arial,sans-serif;
   font-size: 30px;
-  letter-spacing: 4px;
+  /* letter-spacing: 4px; */
   font-weight: bold;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
 }
 
 /* START PAGE SUB-TITLE */
@@ -188,6 +188,10 @@ table {
 
 .page-container {
   display: flex;
+}
+
+.inner-page-container {
+  overflow-y: scroll;
 }
 
 .two-col-container {
@@ -383,6 +387,7 @@ table {
 
 .blurb {
   margin-block-end: 15px;
+  font-size: 12px;
 }
 
 /***************** OTHER *********************/

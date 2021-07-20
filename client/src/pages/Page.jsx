@@ -8,6 +8,7 @@ import Start from './Start.jsx';
 import DecideApp from '../wmm/DecideApp.jsx';
 import Purpose from './Purpose.jsx';
 import Ideas from './Ideas.jsx';
+import Fear from '../ideas/Fear.jsx';
 import About from './About.jsx';
 import Error from './Error.jsx';
 
@@ -16,43 +17,60 @@ const Page = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay
   return (
     <div className="page-container">
       {pageDisplay === 'start' && (
-        <Start />
+        <div className="inner-page-container">
+          <Start />
+        </div>
       )}
       {pageDisplay === 'error' && (
-        <Error />
+        <div className="inner-page-container">
+          <Error />
+        </div>
       )}
       <AppBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
         handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay} />
-        {pageDisplay === 'app' && (
+      {pageDisplay === 'app' && (
+        <div className="inner-page-container">
           <DecideApp />
-        )}
+        </div>
+      )}
       <PurposeBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
         handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay} />
-        {pageDisplay === 'purpose' && (
+      {pageDisplay === 'purpose' && (
+        <div className="inner-page-container">
           <Purpose />
-        )}
+        </div>
+      )}
       <IdeasBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
         handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay} />
-         {pageDisplay === 'ideas' && (
+      {pageDisplay === 'ideas' && (
+        <div className="inner-page-container">
           <Ideas />
-        )}
+        </div>
+      )}
+      {pageDisplay === 'fear' && (
+        <div className="inner-page-container">
+          <Fear />
+        </div>
+      )}
       <AboutBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
         handleMenuClick={handleMenuClick}
         menuDisplay={menuDisplay} />
-         {pageDisplay === 'about' && (
+      {pageDisplay === 'about' && (
+        <div className="inner-page-container">
           <About />
-        )}
+        </div>
+      )}
     </div>
   )
 };

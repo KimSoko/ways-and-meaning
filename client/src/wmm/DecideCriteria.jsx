@@ -10,15 +10,15 @@ const DecideCriteria = ({ handleSubmit, handleCriteria, topic }) => {
     } else if (string === 'career') {
       return 'choosing a new career';
     } else if (string === 'live') {
-      return 'where to live';
+      return 'deciding where to live';
     } else if (string === 'home') {
-      return 'what home to choose';
+      return 'choosing a new home';
     } else if (string === 'relationships') {
-      return 'whom to spend your life with';
+      return 'understanding what qualities matter in a partner';
     } else if (string === 'wmm') {
-      return 'what matters most in your life';
+      return 'clarifying what matters most in your life';
     } else if (string === 'other') {
-      return 'your topic';
+      return 'deciding about your topic';
     } else {
       return `${topic}`;
     }
@@ -28,7 +28,7 @@ const DecideCriteria = ({ handleSubmit, handleCriteria, topic }) => {
     <div className="wmm-topic-container criteria">
       <div className="wmm-form-container">
         <form className="wmm-topic-form">
-          <h4 className="wmm-form-title">{`2. What criteria are most important in making a decision about ${makeString(topic)}?`}</h4>
+          <h4 className="wmm-form-title">{`2. What criteria are you considering when ${makeString(topic)}?`}</h4>
           <div className="wmm-topic-choices">
             <div id="criteria-div">
               <div>

@@ -13,7 +13,7 @@ const Error = () => {
         backgroundRepeat: 'no-repeat'
       }}>
         <div className="left-container">
-          <div className="two-col-container">
+          <div className="two-col-container no-wrap">
             <div className="left-container-nested">
               <h1>Whoops, my bad.</h1>
             </div>

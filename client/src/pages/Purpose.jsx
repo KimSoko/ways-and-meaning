@@ -29,7 +29,7 @@ const Purpose = () => {
     <div className="two-col-container">
       <div className="outer-left-container" style={{
           backgroundImage: 'url(' + image2 + ')',
-          backgroundSize: '50%',
+          backgroundSize: '70%',
           backgroundPosition: '100%',
           backgroundRepeat: 'repeat'
         }}>
