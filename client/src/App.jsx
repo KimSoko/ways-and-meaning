@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Page from './pages/Page.jsx';
 
@@ -33,6 +33,19 @@ const App = () => {
     }
   }
 
+  const handleScroll = () => {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      document.getElementsByClassName("heading")[0].style.fontSize = "40px";
+      document.getElementsByClassName("header")[0].style.backgroundColor = "#FFFCF1";
+    } else {
+      document.getElementsByClassName("heading")[0].style.fontSize = "90px";
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+  })
+
   return (
     <div>
       <Switch>
@@ -45,7 +58,7 @@ const App = () => {
             pageDisplay='start' />
         </Route>
         <Route exact path='/app'>
-        <Page
+          <Page
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
             handleMenuClick={handleMenuClick}
@@ -53,7 +66,7 @@ const App = () => {
             pageDisplay="app" />
         </Route>
         <Route exact path='/purpose'>
-        <Page
+          <Page
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
             handleMenuClick={handleMenuClick}
@@ -61,7 +74,7 @@ const App = () => {
             pageDisplay="purpose" />
         </Route>
         <Route exact path='/ideas'>
-        <Page
+          <Page
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
             handleMenuClick={handleMenuClick}
@@ -69,7 +82,7 @@ const App = () => {
             pageDisplay="ideas" />
         </Route>
         <Route exact path='/ideas/fear-and-confidence'>
-        <Page
+          <Page
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
             handleMenuClick={handleMenuClick}
@@ -77,7 +90,7 @@ const App = () => {
             pageDisplay="fear" />
         </Route>
         <Route exact path='/about'>
-        <Page
+          <Page
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
             handleMenuClick={handleMenuClick}
@@ -85,7 +98,7 @@ const App = () => {
             pageDisplay="about" />
         </Route>
         <Route exact path='/newsletter'>
-        <Page
+          <Page
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
             handleMenuClick={handleMenuClick}

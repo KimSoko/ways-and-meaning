@@ -19,6 +19,13 @@ h1 {
   padding: 20px 20px 20px 0;
 }
 
+.heading {
+  font-size: 90px;
+  background-color: #FFFCF1;
+  opacity: 1;
+  transition: all 1s;
+}
+
 /* NAV BOX TITLES */
 h2 {
   font-family: Helvetica,Arial,sans-serif;
@@ -196,7 +203,6 @@ table {
 }
 
 .page-container {
-  overflow-y: scroll;
   flex: 1;
   width: 100%;
   justify-content: space-between;
@@ -208,6 +214,10 @@ table {
   display: flex;
   padding-bottom: 3rem;
   border-bottom: 5px #2B2F33 solid;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
 }
 
 .body {

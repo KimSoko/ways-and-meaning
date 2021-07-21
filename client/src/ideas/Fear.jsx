@@ -1,13 +1,14 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Fear = () => {
   return (
-    <div className="page-container">
+    <div className="page-container" >
       <div className="header">
         <div className="left-container">
-          <h1>On Fear and Confidence</h1>
+          <h1 className="heading">On Fear and Confidence</h1>
         </div>
         <div className="right-container">
           <Link to="/">

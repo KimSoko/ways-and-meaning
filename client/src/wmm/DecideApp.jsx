@@ -93,7 +93,7 @@ const DecideApp = () => {
     }}>
       <div className="header">
         <div className="left-container">
-          <h1>What Matters Most</h1>
+          <h1 className="heading">What Matters Most</h1>
         </div>
         <div className="right-container">
           <Link to="/">

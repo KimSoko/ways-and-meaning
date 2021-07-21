@@ -13,7 +13,7 @@ const About = () => {
     }}>
       <div className="header">
         <div className="left-container">
-          <h1>About me</h1>
+          <h1 className="heading">About me</h1>
         </div>
         <div className="right-container">
           <Link to="/">

@@ -13,7 +13,7 @@ const Error = () => {
     }}>
       <div className="header">
         <div className="left-container">
-          <h1>Whoops, my bad.</h1>
+          <h1 className="heading">Whoops, my bad.</h1>
         </div>
         <div className="right-container">
           <Link to="/">

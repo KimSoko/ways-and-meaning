@@ -34,7 +34,7 @@ const Purpose = () => {
     }}>
       <div className="header">
         <div className="left-container">
-          <h1>Purpose Toolkit</h1>
+          <h1 className="heading">Purpose Toolkit</h1>
         </div>
         <div className="right-container">
           <Link to="/">

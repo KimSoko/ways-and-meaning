@@ -10,7 +10,7 @@ const Start = () => {
       backgroundRepeat: 'no-repeat'
     }}>
       <div className="header"  >
-        <h1>Ways + Meaning</h1>
+        <h1 className="heading">Ways + Meaning</h1>
       </div>
       <div className="sub-head">
 
