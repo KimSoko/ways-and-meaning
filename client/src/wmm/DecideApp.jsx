@@ -6,6 +6,8 @@ import DecideTopic from './DecideTopic.jsx';
 import DecideCriteria from './DecideCriteria.jsx';
 import DecideChoices from './DecideChoices.jsx';
 import DecideResults from './DecideResults.jsx';
+import TopicError from './TopicError.jsx';
+import CriteriaError from './CriteriaError.jsx';
 import image from '../../dist/media/choices-2.png';
 import helpers from '../helpers/wmm.js';
 
@@ -15,6 +17,8 @@ const DecideApp = () => {
   const [criteria, setCriteria] = useState(helpers.emptyCriteria);
   const [list, setList] = useState([]);
   const [options, setOptions] = useState([]);
+  const [showTopicError, setShowTopicError] = useState(false);
+  const [showCriteriaError, setShowCriteriaError] = useState(false);
 
   useEffect(() => {
     let copy = options.slice();
@@ -23,8 +27,12 @@ const DecideApp = () => {
   }, [options])
 
   const handleNext = () => {
-    if (wmmDisplay === 'topic') {
+    if (wmmDisplay === 'topic' && topic === '') {
+      setShowTopicError(true);
+    } else if (wmmDisplay === 'topic') {
       setWmmDisplay('criteria');
+    } else if (wmmDisplay === 'criteria' && criteria[2].value === '') {
+      setShowCriteriaError(true);
     } else if (wmmDisplay === 'criteria') {
       setWmmDisplay('decide');
     } else if (wmmDisplay === 'decide') {
@@ -48,9 +56,13 @@ const DecideApp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let newOptions = helpers.createOptions(criteria);
-    setOptions(newOptions);
-    setWmmDisplay('decide');
+    if (criteria[2].value === '') {
+      setShowCriteriaError(true);
+    } else {
+      let newOptions = helpers.createOptions(criteria);
+      setOptions(newOptions);
+      setWmmDisplay('decide');
+    }
   };
 
   const handleVote = (e) => {
@@ -105,6 +117,10 @@ const DecideApp = () => {
         <h3>A decision making app</h3>
       </div>
       <div className="body">
+        {showTopicError && (
+          <TopicError
+            setShowTopicError={setShowTopicError} />
+        )}
         {wmmDisplay === 'topic' && (
           <DecideTopic
             setTopic={setTopic}
@@ -115,6 +131,10 @@ const DecideApp = () => {
             topic={topic}
             handleCriteria={handleCriteria}
             handleSubmit={handleSubmit} />
+        )}
+        {showCriteriaError && (
+          <CriteriaError
+            setShowCriteriaError={setShowCriteriaError} />
         )}
         {wmmDisplay === 'decide' && (
           <DecideChoices

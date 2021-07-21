@@ -33,17 +33,19 @@ const App = () => {
     }
   }
 
-  const handleScroll = () => {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+  const handleScroll = (e) => {
+    if (document.documentElement.scrollTop > 1) {
       document.getElementsByClassName("heading")[0].style.fontSize = "40px";
       document.getElementsByClassName("header")[0].style.backgroundColor = "#FFFCF1";
     } else {
       document.getElementsByClassName("heading")[0].style.fontSize = "90px";
+      document.getElementsByClassName("header")[0].style.backgroundColor = "transparent";
     }
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll);
+    console.log('rendering');
   })
 
   return (

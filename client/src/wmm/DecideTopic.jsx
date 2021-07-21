@@ -3,7 +3,8 @@
 import React, { useState } from 'react';
 
 const DecideTopic = ({ handleNext, setTopic }) => {
-  const [other, setOther] = useState('')
+  const [other, setOther] = useState('');
+
   const handleTopic = (e) => {
     const option = e.target.id;
     if (option === 'other') {
@@ -27,7 +28,7 @@ const DecideTopic = ({ handleNext, setTopic }) => {
           <form className="wmm-topic-form">
             <h4 className="wmm-form-title">1. What decision do you need help with today?</h4>
             <div className="wmm-topic-choices">
-              <input className="radio-input" type="radio" onClick={handleTopic} id="job" name="topic" />
+              <input className="radio-input" type="radio" required onClick={handleTopic} id="job" name="topic" />
               <label className="form-content" htmlFor="job">Choose a new job</label><br />
               <input className="radio-input" type="radio" onClick={handleTopic} id="career" name="topic" />
               <label className="form-content" htmlFor="career">Pick a new career</label><br />

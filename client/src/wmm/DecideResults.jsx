@@ -9,6 +9,7 @@ const DecideResults = ({ handlePost, criteria, topic }) => {
   return (
     <>
       <div className="left-container">
+        {console.log('results page rendering')}
         <div className="table-container">
           <table>
             <thead>

@@ -21,8 +21,6 @@ h1 {
 
 .heading {
   font-size: 90px;
-  background-color: #FFFCF1;
-  opacity: 1;
   transition: all 1s;
 }
 
@@ -456,6 +454,19 @@ input:focus {
 .wmm-topic-container {
   display: block;
   width: 600px;
+}
+
+.modal {
+  width: 300px;
+  background-color:#FFFCF1;
+  color: #E15400;
+  position: fixed;
+  left: 15rem;
+  top: 35rem;
+  text-align: center;
+  font-weight: bold;
+  padding: 30px;
+  box-shadow: 2px 2px 5px rgb(95, 77, 99);
 }
 
 .radio-input {
