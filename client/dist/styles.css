@@ -573,9 +573,15 @@ input:focus {
   margin-bottom: 75px;
 }
 
+#counter {
+  color: #E15400;
+  width: fit-content;
+  margin-left: 100px;
+  margin-block-end: 0;
+}
+
 .instructions {
   width: 500px;
-  margin-top: 50px;
 }
 
 .table-container {

@@ -19,6 +19,8 @@ const DecideApp = () => {
   const [options, setOptions] = useState([]);
   const [showTopicError, setShowTopicError] = useState(false);
   const [showCriteriaError, setShowCriteriaError] = useState(false);
+  const [remaining, setRemaining] = useState();
+  const [total, setTotal] = useState();
 
   useEffect(() => {
     let copy = options.slice();
@@ -62,6 +64,8 @@ const DecideApp = () => {
       let newOptions = helpers.createOptions(criteria);
       setOptions(newOptions);
       setWmmDisplay('decide');
+      setTotal(newOptions.length);
+      setRemaining(newOptions.length);
     }
   };
 
@@ -78,6 +82,7 @@ const DecideApp = () => {
     let oldOptions = options.slice();
     oldOptions.pop();
     setOptions(oldOptions);
+    setRemaining(oldOptions.length);
     if (oldOptions.length === 0) {
       setWmmDisplay('results');
     }
@@ -140,7 +145,9 @@ const DecideApp = () => {
           <DecideChoices
             list={list}
             handleVote={handleVote}
-            handleNext={handleNext} />
+            handleNext={handleNext}
+            remaining={remaining}
+            total={total} />
         )}
         {wmmDisplay === 'results' && (
           <DecideResults

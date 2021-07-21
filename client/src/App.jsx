@@ -45,7 +45,6 @@ const App = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    console.log('rendering');
   })
 
   return (

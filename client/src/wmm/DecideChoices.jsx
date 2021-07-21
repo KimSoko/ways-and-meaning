@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-const DecideChoices = ({ list, handleVote }) => {
+const DecideChoices = ({ list, remaining, total, handleVote }) => {
 
   return (
     <div className="left-container">
@@ -37,7 +37,7 @@ const DecideChoices = ({ list, handleVote }) => {
               <div key={`${list[0].name}-${list[0].value}`} id="left-div">
                 <button className="option-button" id="option-E" name={list[0].name} onClick={handleVote}>{list[0].value}</button>
               </div>
-              <p className="or inner-text">or</p>
+              <p className="or">or</p>
               <div key={`${list[1].name}-${list[1].value}`} id="right-div">
                 <button className="option-button" id="option-F" name={list[1].name} onClick={handleVote}>{list[1].value}</button>
               </div>
@@ -45,6 +45,7 @@ const DecideChoices = ({ list, handleVote }) => {
           )}
         </div>
       )}
+      <p className="inner-text" id="counter">{remaining} of {total} options remaining</p>
       <div className="instructions inner-text">
         <p>Click on the option that matters most to you. <strong>You must choose one.</strong> The app will continue to offer new options until all possible combinations have been considered. When you're done, your results will be displayed automatically.</p>
       </div>
