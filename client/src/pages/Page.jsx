@@ -15,15 +15,8 @@ import Error from './Error.jsx';
 
 const Page = ({ handleMouseEnter, handleMouseLeave, handleMenuClick, menuDisplay, pageDisplay }) => {
 
-  const handleScroll = () => {
-    // if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    //   document.getElementById("header").style.fontSize = "24px";
-    // }
-    console.log("I'm scrolling")
-  }
-
   return (
-    <div className="app-container" onScroll={handleScroll}>
+    <div className="app-container" >
       {pageDisplay === 'start' && (
         <Start />
       )}
