@@ -34,7 +34,7 @@ const App = () => {
   }
 
   const handleScroll = (e) => {
-    if (document.documentElement.scrollTop > 1) {
+    if (document.documentElement.scrollTop > 10) {
       document.getElementsByClassName("heading")[0].style.fontSize = "40px";
       document.getElementsByClassName("header")[0].style.backgroundColor = "#FFFCF1";
     } else {
