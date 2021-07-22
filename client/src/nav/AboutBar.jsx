@@ -9,7 +9,7 @@ const AboutBar = ({ menuDisplay, handleMouseEnter, handleMouseLeave, handleMenuC
       <Link to="/about">
         <h4>ABOUT</h4>
         {menuDisplay === 'about' && (
-          <div className="nav-bar-expanded">
+          <div className="nav-bar-expanded about-bar">
             <p>Hi, I'm Kim Soko Schaefer, the human behind this site. You might be wondering why I'm qualified to give you advice on betterr living. The truth is I'm not. No one is. But I've done a lot of things to help me street cred. Notably, I'm a...</p>
             <ol>
               <li>Strategy Consultant</li>

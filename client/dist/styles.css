@@ -122,16 +122,20 @@ table {
   vertical-align: top;
   box-shadow: 2px 2px 5px rgb(95, 77, 99);
   flex-grow: .00001;
+  flex-shrink: 1;
+  min-width: 50px;
   height: 100%;
   align-self: flex-start;
 }
 
+.nav-bar:hover {
+  min-width: 340px;
+}
+
 .nav-bar:hover h4 {
   padding: 150px 20px 20px 20px;
-  flex-grow: 1;
-  flex-shrink: 1;
+  flex: 0000.1 1 300px;
   writing-mode: horizontal-tb;
-  width: 300px;
   font-size: 30px;
   letter-spacing: 4px;
   text-align: left;
@@ -140,13 +144,15 @@ table {
   margin-block-end: 0px;
   transition-property: flex-grow, flex-shrink, writing-mode, font-size, width;
   transition-duration: 1s;
+  max-width: 300px;
+  min-width: 300px;
 }
 
 .nav-bar-expanded {
   position: relative;
   display: inline;
   writing-mode: horizontal-tb;
-  width: 300px;
+  max-width: 300px;
 }
 
 .app-bar {
@@ -196,14 +202,14 @@ table {
 /******************* PAGES ******************/
 
 .app-container {
-  flex-basis: auto;
   display: flex;
   width: 100%;
 }
 
 .page-container {
-  flex: 1;
-  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 2;
+  min-width: 0;
   justify-content: space-between;
   flex-wrap: wrap;
 }

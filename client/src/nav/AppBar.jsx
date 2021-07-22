@@ -9,7 +9,7 @@ const AppBar = ({ menuDisplay, handleMouseEnter, handleMouseLeave, handleMenuCli
       <Link to="/app">
         <h4>WHAT MATTERS MOST APP</h4>
         {menuDisplay === 'app' && (
-          <div className="nav-bar-expanded">
+          <div className="nav-bar-expanded app-bar">
             <p>Making major life decisions is hard. This app should help make it a bit easier by helping you to prioritize what matters most.</p>
             <ol>
               <li>Select a topic</li>
