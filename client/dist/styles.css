@@ -168,7 +168,7 @@ table {
 
 .purpose-bar {
   background-color: #EAB6E5;
-  color: #E15400;
+  color: #1D4763;
 }
 
 .purpose-bar-2 {
@@ -190,7 +190,7 @@ table {
 
 .about-bar {
   background-color: #E15400;
-  color: #EAB6E5;
+  color: #FFFCF1;
 }
 
 .about-bar-2 {
@@ -225,6 +225,10 @@ table {
   align-self: flex-start;
 }
 
+#ideas-header {
+  z-index: 5;
+}
+
 .body {
   margin: 0 3rem 3rem 3rem;
   padding-bottom: 2rem;
@@ -243,14 +247,22 @@ table {
   margin: 1rem 0 1rem 0;
 }
 
+.float-left {
+  float: left;
+}
+
 .right-container {
   flex: 0;
   display: inline;
   margin: 1rem 0 1rem 0;
 }
 
+.right.container {
+  float: right;
+}
+
 .inner-text {
-  width: 800px;
+  max-width: 600px;
   background-color: rgba(255, 252, 241, .7);
   padding: 20px;
 }
@@ -275,6 +287,7 @@ table {
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-top: 3rem;
+  margin-left: 3px;
 }
 
 .articles-box {

@@ -46,7 +46,10 @@ const Purpose = () => {
         <h3>A gift for you</h3>
       </div>
       <div className="body">
-        <div className="left-container inner-text">
+        <div className="right-container float-right">
+          <img className="right-image" src={image} alt="Purpose Framework" />
+        </div>
+        <div className="left-container inner-text float-left">
           <p>Let’s kick off this relationship with a gift. The purpose toolkit includes:
           </p>
           <ul>
@@ -62,9 +65,6 @@ const Purpose = () => {
             <input type="text" name="email" id="email-input" defaultValue="name@email.com" onClick={handleClick} onChange={handleChange}></input>
             <button className="button-form" type="button" id="email-button" onClick={handleEmail}>Sign up</button>
           </form>
-        </div>
-        <div className="right-container">
-          <img className="right-image" src={image} alt="Purpose Framework" />
         </div>
       </div>
     </div >

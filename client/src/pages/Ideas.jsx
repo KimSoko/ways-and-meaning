@@ -13,7 +13,7 @@ import image6 from '../../dist/media/mindful_woman.jpg';
 const Ideas = () => {
   return (
     <div className="page-container">
-      <div className="header">
+      <div className="header" id="ideas-header">
         <div className="left-container">
           <h1 className="heading">Ideas</h1>
         </div>
