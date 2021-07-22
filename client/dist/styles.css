@@ -457,6 +457,46 @@ input:focus {
   margin: 0 50px 50px 50px;
 }
 
+.about-image-div {
+  max-width: 205px;
+  margin-top: -70px;
+}
+
+.line {
+  margin-top: -5px;
+}
+
+#last-line {
+  height: 100%;
+}
+
+.left-box {
+  height: 50px;
+  width: 100px;
+  border-right: 3px solid #2B2F33;
+}
+
+.right-box {
+  height: 50px;
+  width: 100px;
+  display: inline;
+}
+
+.circle-image {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 3px solid #2B2F33;
+}
+
+.transparent {
+  opacity: .7;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
 /*************** WMM ******************/
 
 .wmm-form-container {
