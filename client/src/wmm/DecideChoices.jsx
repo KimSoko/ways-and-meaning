@@ -45,8 +45,9 @@ const DecideChoices = ({ list, remaining, total, handleVote }) => {
           )}
         </div>
       )}
-      <p className="inner-text" id="counter">{remaining} of {total} options remaining</p>
+
       <div className="instructions inner-text">
+      <p id="counter">{remaining} of {total} options remaining</p>
         <p>Click on the option that matters most to you. <strong>You must choose one.</strong> The app will continue to offer new options until all possible combinations have been considered. When you're done, your results will be displayed automatically.</p>
       </div>
     </div>

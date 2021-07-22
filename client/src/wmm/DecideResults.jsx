@@ -10,46 +10,49 @@ const DecideResults = ({ handlePost, criteria, topic }) => {
     <>
       <div className="left-container">
         <div className="table-container">
-          <table>
-            <thead>
-              <tr className="table-header">
-                <th className="table-header short" id="header-rank">RANK</th>
-                <th className="table-header" id="header-name">CRITERIA</th>
-                <th className="table-header short" id="header-score">SCORE</th>
-              </tr>
-            </thead>
-            <tbody className="top-border bottom-border">
-              {sorted.map((item) => {
-                if (sorted.indexOf(item) === 0) {
-                  return (
-                    <tr key={`${item.name}-${item.score}`}>
-                      <td className="table-first-row left-border" id="row-score">1</td>
-                      <td className="table-first-row" id="row-name">{item.value}</td>
-                      <td className="table-first-row right-border" id="row-score">{item.score}</td>
-                    </tr>
-                  )
-                } else {
-                  return (
-                    <tr key={`${item.name}-${item.score}`}>
-                      <td className="table-row" id="row-score">{sorted.indexOf(item) + 1}</td>
-                      <td className="table-row" id="row-name">{item.value}</td>
-                      <td className="table-row right-border" id="row-score">{item.score}</td>
-                    </tr>
-                  )
-                }
-              })}
-            </tbody>
-          </table>
+          <div>
+            <h2 className="no-top-margin">Results</h2>
+            <table>
+              <thead>
+                <tr className="table-header">
+                  <th className="table-header short" id="header-rank">RANK</th>
+                  <th className="table-header" id="header-name">CRITERIA</th>
+                  <th className="table-header short" id="header-score">SCORE</th>
+                </tr>
+              </thead>
+              <tbody className="top-border bottom-border">
+                {sorted.map((item) => {
+                  if (sorted.indexOf(item) === 0) {
+                    return (
+                      <tr key={`${item.name}-${item.score}`}>
+                        <td className="table-first-row left-border" id="row-score">1</td>
+                        <td className="table-first-row" id="row-name">{item.value}</td>
+                        <td className="table-first-row right-border" id="row-score">{item.score}</td>
+                      </tr>
+                    )
+                  } else {
+                    return (
+                      <tr key={`${item.name}-${item.score}`}>
+                        <td className="table-row" id="row-score">{sorted.indexOf(item) + 1}</td>
+                        <td className="table-row" id="row-name">{item.value}</td>
+                        <td className="table-row right-border" id="row-score">{item.score}</td>
+                      </tr>
+                    )
+                  }
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       <div className="right-container">
-        <div className="inner-text help-message-container">
+        <div className="help-message-container inner-text">
           <h2 className="help-message">Wanna help more people?</h2>
           <p>I want to help everybody make better decisions in life,
             But in order to do that, I need your help.
             Click the button below and I'll store your data (no email) and analyze the results to improve decision making for everybody!</p>
+          <button className="form-next help-button" onClick={handlePost}>I wanna help</button>
         </div>
-        <button className="form-next help-button" onClick={handlePost}>I wanna help</button>
       </div>
     </>
   );

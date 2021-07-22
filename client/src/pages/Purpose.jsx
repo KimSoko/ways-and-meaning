@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import image from '../../dist/media/purpose-red.png';
+import image from '../../dist/media/Purpose-with-background.png';
 import image2 from '../../dist/media/grid.png';
 
 const Purpose = () => {
@@ -45,11 +45,8 @@ const Purpose = () => {
       <div className="sub-head">
         <h3>A gift for you</h3>
       </div>
-      <div className="body">
-        <div className="right-container float-right">
-          <img className="right-image" src={image} alt="Purpose Framework" />
-        </div>
-        <div className="left-container inner-text float-left">
+      <div className="body reverse">
+        <div className="left-container inner-text">
           <p>Let’s kick off this relationship with a gift. The purpose toolkit includes:
           </p>
           <ul>
@@ -65,6 +62,11 @@ const Purpose = () => {
             <input type="text" name="email" id="email-input" defaultValue="name@email.com" onClick={handleClick} onChange={handleChange}></input>
             <button className="button-form" type="button" id="email-button" onClick={handleEmail}>Sign up</button>
           </form>
+        </div>
+        <div className="right-container">
+          <div className="right-image-div shrink">
+            <img className="right-image" src={image} alt="Purpose Framework" />
+          </div>
         </div>
       </div>
     </div >

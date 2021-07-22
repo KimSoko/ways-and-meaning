@@ -23,7 +23,7 @@ const Ideas = () => {
           </Link>
         </div>
       </div>
-      <div className="body">
+      <div className="body no-right-margin">
         <div className="articles-div">
           <Card
             title="On Fear and Confidence"
