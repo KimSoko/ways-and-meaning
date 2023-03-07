@@ -32,4 +32,4 @@ if (process.env.NODE_ENV !== 'test') {
   app.listen(port, () => {
     console.log('W+M is listening on port 3002');
   });
-}ac
+}
