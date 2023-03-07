@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 const mc = require('@mailchimp/mailchimp_marketing');
 const axios = require('axios');
-const API_KEY = require('./mailchimpAPI.js') | process.env.MAILCHIMP_KEY;
+const API_KEY = process.env.MAILCHIMP_KEY;
 
 mc.setConfig({
   apiKey: API_KEY,
