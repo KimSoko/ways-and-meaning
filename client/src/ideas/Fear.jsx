@@ -1,9 +1,31 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const Fear = () => {
+
+  const [email, setEmail] = useState('');
+
+  const handleClick = (e) => {
+    e.target.value = '';
+  };
+
+  const handleChange = (e) => {
+    let newEmail = e.target.value;
+    setEmail(newEmail);
+  };
+
+  const handleEmail = () => {
+    axios.post('/mailchimp', { email: email })
+      .then(() => {
+      })
+      .catch((err) => {
+        console.log('From handleEmail ', err);
+      })
+  };
+
   return (
     <div className="page-container" >
       <div className="header">
@@ -128,6 +150,15 @@ const Fear = () => {
           <p>So now I leave you with words from a great man. Theodore Roosevelt’s ‘Man in the Arena’ quote from a speech titled <cite>Citizenship of the Republic</cite> which he gave in France in April 1910:</p>
           <p className="quote">“It is not the critic who counts; not the man who points out how the strong man stumbles, or where the doer of deeds could have done them better. The credit belongs to the man who is actually in the arena, whose face is marred by dust and sweat and blood; who strives valiantly; who errs, who comes short again and again, because there is no effort without error and shortcoming; but who does actually strive to do the deeds; who knows great enthusiasms, the great devotions; who spends himself in a worthy cause; who at the best knows in the end the triumph of high achievement, and who at the worst, if he fails, at least fails while daring greatly, so that his place shall never be with those cold and timid souls who neither know victory nor defeat.” – Theodore Roosevelt</p>
           <p>Believe in yourself. Then do what you have to do.</p>
+          <br/>
+          <p>***</p>
+          <br/>
+          <h2>What more of this?</h2>
+          <p>Sign up for my newsletter and be notified on the rare occasion that I create something new. (the battle continues...)</p>
+          <form id="email-form">
+            <input type="text" name="email" id="email-input" defaultValue="name@email.com" onClick={handleClick} onChange={handleChange}></input>
+            <button className="button-form" type="button" id="email-button" onClick={handleEmail}>Sign up</button>
+          </form>
         </div>
       </div>
     </div>

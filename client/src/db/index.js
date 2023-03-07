@@ -1,17 +1,17 @@
 /* eslint-disable no-undef */
-var mysql = require('mysql');
+// var mysql = require('mysql');
 
-const connection = mysql.createConnection({
-  user: 'root',
-  password: '',
-  database: 'most'
-});
+// const connection = mysql.createConnection({
+//   user: 'root',
+//   password: '',
+//   database: 'most'
+// });
 
-connection.connect(function(err) {
-  if (err) {
-    throw err;
-  }
-  console.log('WMM is connected to the server!');
-});
+// connection.connect(function(err) {
+//   if (err) {
+//     throw err;
+//   }
+//   console.log('WMM is connected to the server!');
+// });
 
-module.exports = connection;
+// module.exports = connection;

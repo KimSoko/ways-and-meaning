@@ -21,7 +21,7 @@ app.use(cors());
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname+'/client/dist/index.html'));
 })
-app.post('/data', postData)
+// app.post('/data', postData)
 app.post('/mailchimp', addContact)
 
 if (process.env.NODE_ENV !== 'test') {
