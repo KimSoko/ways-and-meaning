@@ -45,7 +45,7 @@ const DecideResults = ({ handlePost, criteria, topic }) => {
           </div>
         </div>
       </div>
-      <div className="right-container">
+      {/* <div className="right-container">
         <div className="help-message-container inner-text">
           <h2 className="help-message">Wanna help more people?</h2>
           <p>I want to help everybody make better decisions in life,
@@ -53,7 +53,7 @@ const DecideResults = ({ handlePost, criteria, topic }) => {
             Click the button below and I'll store your data (no email) and analyze the results to improve decision making for everybody!</p>
           <button className="form-next help-button" onClick={handlePost}>I wanna help</button>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
