@@ -9,7 +9,6 @@ lerna-debug.log*
 # Bundle
 ignoredBundle.js
 ignoredBundle.js.LICENSE.txt
-bundle.js
 bundle2.js
 bundle.js.LICENSE.txt
 bundle2.js.LICENSE.txt
