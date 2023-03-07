@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/KimSoko/ways-and-meaning/issues"
   },
-  "homepage": "https://github.com/KimSoko/ways-and-meaning#readme",
+  "homepage": "https://ways-and-meaning.herokuapp.com/",
   "dependencies": {
     "@babel/core": "^7.14.2",
     "@babel/preset-env": "^7.14.2",
@@ -50,5 +50,4 @@
   "engines": {
     "node": "16.x"
   },
-  "homepage": "https://ways-and-meaning.herokuapp.com/"
 }
