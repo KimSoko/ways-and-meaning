@@ -14,18 +14,22 @@ if (port == null || port == "") {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, './client/dist')));
+
+
+const root = require('path').join(__dirname, 'client', 'dist')
+app.use(express.static(root));
 app.use(cors());
 
 // ROUTES
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/client/dist/index.html'));
+
+app.get("*", (req, res) => {
+  res.sendFile('index.html', { root });
 })
-// app.post('/data', postData)
+
 app.post('/mailchimp', addContact)
 
 if (process.env.NODE_ENV !== 'test') {
   app.listen(port, () => {
     console.log('W+M is listening on port 3002');
   });
-}
+}ac
