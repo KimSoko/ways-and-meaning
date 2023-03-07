@@ -2,7 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const postData = require('./client/src/db/queries.js');
+// const postData = require('./client/src/db/queries.js');
 const addContact = require('./client/src/helpers/mailchimp.js');
 
 const app = express();
